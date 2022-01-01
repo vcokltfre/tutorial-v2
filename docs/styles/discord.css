@@ -2,6 +2,7 @@
     border-radius: 0.4rem;
     border: 0.07rem solid var(--md-primary-fg-color);
     padding: 0.5rem;
+    padding-bottom: 0.1rem;
 }
 
 .d-msg-slash {
