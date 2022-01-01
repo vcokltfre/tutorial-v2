@@ -42,4 +42,4 @@ Before you start, there's a few things you will need to start developing bots:
 
 Now that you have these things you're ready to start the tutorial!
 
-[Take Me to the Tutorial!](/tutorial/01-setup){ .md-button .md-button--primary } [Show Me the Credits](/credits){ .md-button }
+[Take Me to the Tutorial!](/tutorial/beginner/01-setup){ .md-button .md-button--primary } [Show Me the Credits](/credits){ .md-button }

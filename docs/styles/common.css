@@ -9,3 +9,8 @@
 .md-footer__inner {
     padding: 0.05rem;
 }
+
+.d-img {
+    border-radius: 0.4rem;
+    border: 0.1rem solid var(--md-primary-fg-color);
+}
