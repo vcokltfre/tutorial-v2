@@ -29,7 +29,7 @@
     position: relative;
     top: -0.25rem;
     font-size: 80%;
-    color: lightgrey;
+    color: var(--dmsg-color);
 }
 
 .d-msg-slash-used {
@@ -82,5 +82,5 @@
 .d-msg-content {
     margin-left: 0.25rem;
     font-size: 80%;
-    color: #dddddd;
+    color: var(--dmsg-color);
 }

@@ -55,6 +55,8 @@
     --md-footer-fg-color: var(--md-typeset-color);
     --md-footer-bg-color: hsla(var(--md-hue), 15%, 12%, 0.87);
     --md-footer-bg-color--dark: hsla(var(--md-hue), 15%, 10%, 1);
+
+    --dmsg-color: #dddddd;
 }
 
 label.md-nav__link,
