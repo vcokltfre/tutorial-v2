@@ -83,7 +83,7 @@ In this part we'll create a basic slash command which just responds with "Hello,
 
 !!! Warning
 
-    Storing tokens in your code like this is dangerous, if you upload a sample of your code to somewhere like Pastebin people could get your token and use it maliciously. It is recommended that you always store tokens in an environment variable or file, which is ignored by your version control system like Git.
+    Storing tokens in your code like this is dangerous, if you upload a sample of your code to somewhere like Pastebin people could get your token and use it maliciously. It is recommended that you always store tokens in an environment variable or file, which is ignored by your version control system like Git. See [Storing Tokens and Secrets](/tips/tokens) for more information about how to correctly store application credentials.
 
 In the end you should have a command that looks like this:
 
