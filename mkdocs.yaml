@@ -56,3 +56,10 @@ markdown_extensions:
 plugins:
   - search
   - macros
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/vcokltfre/tutorial-v2
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/AxZRkWgzdh
