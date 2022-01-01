@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://tutorial-alpha.vcokltfre.dev/tutorial/beginner/02-overview/">
+        <link rel="canonical" href="https://tutorial-alpha.vcokltfre.dev/tutorial/beginner/04-pong/">
       
       <link rel="icon" href="../../../assets/tutorial.svg">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
-        <title>An Overview of Discord - Discord Bot Tutorial</title>
+        <title>A Ping Command - Discord Bot Tutorial</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#an-overview-of-discord" class="md-skip">
+        <a href="#a-ping-command" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              An Overview of Discord
+              A Ping Command
             
           </span>
         </div>
@@ -395,66 +395,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          An Overview of Discord
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../02-overview/" class="md-nav__link">
         An Overview of Discord
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-the-gateway" class="md-nav__link">
-    1: The Gateway
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-the-api" class="md-nav__link">
-    2: The API
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-terminology" class="md-nav__link">
-    3: Terminology
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -478,11 +423,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../04-pong/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         A Ping Command
       </a>
+      
     </li>
   
 
@@ -521,35 +476,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-the-gateway" class="md-nav__link">
-    1: The Gateway
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-the-api" class="md-nav__link">
-    2: The API
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-terminology" class="md-nav__link">
-    3: Terminology
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -560,47 +486,93 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/vcokltfre/tutorial-v2/edit/master/docs/tutorial/beginner/02-overview.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/vcokltfre/tutorial-v2/edit/master/docs/tutorial/beginner/04-pong.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="an-overview-of-discord">An Overview of Discord<a class="headerlink" href="#an-overview-of-discord" title="Permanent link">&para;</a></h1>
-<p>If you already have a decent understanding of WebSockets, the Discord API, and general Discord terminology, you can likely skip ahead to the next part in the tutorial.</p>
-<h2 id="1-the-gateway">1: The Gateway<a class="headerlink" href="#1-the-gateway" title="Permanent link">&para;</a></h2>
-<p>The gateway is just the Discord name for a WebSocket connection to Discord, following a specific protocol of packets that we need to send and receive. This is our bot's primary connection to Discord and means that instead of asking Discord repeatedly for events that have happened (known as polling), we just tell Discord which events we want to receive via gateway intents, and Discord will send us those events over the persistent socket we have connected with.</p>
-<p>When using client libraries like Nextcord and Disnake we don't need to worry too much about how this happens at such a low level, but it can help you to understand how each of the cogs in the machine works. Often it's helpful to understand the low-level architecture of a service like Discord, as it gives you a better understanding of how the service works at a higher level.</p>
-<p>Upon receiving an event from the gateway, the library will check the OP code of the packet, and then call the appropriate function in the library. Many of these OP codes are internal, such as resuming a session, identifying the client, and sending heartbeats, but some, like OP 10 (READY), are also dispatched as user facing events (specifically on_ready in this instance). Events with OP 0 - dispatch events, are the ones we will primarily use, as they contain events like MESSAGE_CREATE, MEMBER_UPDATE, and all the other useful events for building a functional bot.</p>
-<p>That's pretty much it for the gateway at this level. There is a lot more detail that can be talked about with the gateway, but that's out of the scope of this tutorial, and if you're interested in further reading the official Discord documentation for the gateway can be found <a href="https://discord.com/developers/docs/topics/gateway" rel="noopener" target="_blank">here</a>.</p>
-<h2 id="2-the-api">2: The API<a class="headerlink" href="#2-the-api" title="Permanent link">&para;</a></h2>
-<p>The API is how out bots talk back to Discord. We're receiving events from the gateway which deliver information to our bot, but when we want to resond to one of these events, for example automatically deleting a message with banned words in it, we need to make a request to Discord's REST API telling it to delete that message. If you've ever sent a message on Discord, added a reaction, renamed a channel, or done just about any other action in the client, you've interacted with the API before, you just haven't seen it.</p>
-<p>Bots have most of the same endpoints available as regular users, bar a few like adding friends, blocking people, and joining guilds. They do, however, have certain features exclusive to bots, like the ability to lock emojis to members with a certain role.</p>
-<p>As with the gateway, API calls are done behind the scenes and you don't need to manually interact with the API. This is useful as it abstracts away the difficult points of passing headers and handling ratelimits.</p>
-<h2 id="3-terminology">3: Terminology<a class="headerlink" href="#3-terminology" title="Permanent link">&para;</a></h2>
-<p>In Discord there are a few special words for things which we need to understand and be able to differentiate between. The following table shows what a word means in the context of this tutorial.</p>
-<table>
-<thead>
-<tr>
-<th>Term</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>guild</td>
-<td>The internal word that Discord has for what you know as a server.</td>
-</tr>
-<tr>
-<td>user</td>
-<td>A Discord user, not containing information relating to a guild.</td>
-</tr>
-<tr>
-<td>member</td>
-<td>A Discord user, with guild context. You'll only receive members if you have the server members gateway intent enabled, which will be explained later, or sometimes in other events like voice state updates and as the author in message events.</td>
-</tr>
-</tbody>
-</table>
-<p>And that's pretty much it for this part of the tutorial. I hope this has given you at least some useful knowledge about roughly how Discord works, and now you can move on to the next part!</p>
+<h1 id="a-ping-command">A Ping Command<a class="headerlink" href="#a-ping-command" title="Permanent link">&para;</a></h1>
+<p>So far our bot is pretty simple - you type <code>/hello</code> and the bot responds with "Hello!" as a static response, which isn't particularly interesting. In this tutorial part we'll use useful information from our bot - its gateway latency - to respond with a more interesting response about the bot's performance.</p>
+<p>Here's the code from the previous part:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Nextcord</label><label for="__tabbed_1_2">Disnake</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">nextcord</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">nextcord</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+
+<span class="nd">@client</span><span class="o">.</span><span class="n">slash_command</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A simple hello command.&quot;</span><span class="p">,</span>
+    <span class="n">guild_ids</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">nextcord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+
+<span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;YOUR_BOT_TOKEN&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">disnake</span> <span class="kn">import</span> <span class="n">ApplicationCommandInteraction</span>
+<span class="kn">from</span> <span class="nn">disnake.ext.commands</span> <span class="kn">import</span> <span class="n">Bot</span>
+
+<span class="n">bot</span> <span class="o">=</span> <span class="n">Bot</span><span class="p">()</span>
+
+<span class="nd">@bot</span><span class="o">.</span><span class="n">slash_command</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A simple hello command.&quot;</span><span class="p">,</span>
+    <span class="n">guild_ids</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">ApplicationCommandInteraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+
+<span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;YOUR_BOT_TOKEN&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>The code we will be writing in a second will go just above the <code>bot.run()</code> call. Firstly we'll start out by defining the command again:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Nextcord</label><label for="__tabbed_2_2">Disnake</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nd">@client</span><span class="o">.</span><span class="n">slash_command</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ping&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A simple ping command.&quot;</span><span class="p">,</span>
+    <span class="n">guild_ids</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">ping</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">nextcord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</code></pre></div>
+<p>And next we'll add in the magical line which shows us the bot's latency:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pong! </span><span class="si">{</span><span class="n">client</span><span class="o">.</span><span class="n">latency</span> <span class="o">*</span> <span class="mi">1000</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">ms&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nd">@bot</span><span class="o">.</span><span class="n">slash_command</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ping&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A simple ping command.&quot;</span><span class="p">,</span>
+    <span class="n">guild_ids</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">ping</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">ApplicationCommandInteraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</code></pre></div>
+<p>And next we'll add in the magical line which shows us the bot's latency:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pong! </span><span class="si">{</span><span class="n">bot</span><span class="o">.</span><span class="n">latency</span> <span class="o">*</span> <span class="mi">1000</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">ms&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The final line here is indented by one indent. Make sure to reflect this in your own code.</p>
+</div>
+<p>Most of this you have seen before in the previous part, but the important bit is the line which says either:</p>
+<ul>
+<li><code>await inter.response.send_message(f"Pong! {client.latency * 1000:.2f}ms")</code> (Nextcord)</li>
+<li><code>await inter.send(f"Pong! {bot.latency * 1000:.2f}ms")</code> (Disnake)</li>
+</ul>
+<p>The <code>latency</code> property of the bot or client tells us in seconds how long it took for the Discord gateway to respond to us last time we sent it a heartbeat payload (which keeps the connection alive). We multiply this by 1000 to get the latency in milliseconds, which is better for being interpreted, and is more standard, and then we round it to 2 decimal places using the <code>:.2f</code> format specifier.</p>
+<p>Now you can once again run your bot - having changed the <code>guild_ids=[...]</code> to contain your own guild IDs - and you'll be able to use the command like this:</p>
+<p><img alt="Slash Command" class="d-img" src="/assets/img/slash_2.png" /></p>
+<p>That's it for this part! Now you're ready to move on to the next part: listening for events!</p>
 
               
             </article>
@@ -614,7 +586,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../01-setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Creating a Bot User" rel="prev">
+        <a href="../03-hello/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hello, world" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -623,26 +595,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Creating a Bot User
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../03-hello/" class="md-footer__link md-footer__link--next" aria-label="Next: Hello, world" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
               Hello, world
             </div>
           </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
         </a>
+      
       
     </nav>
   
