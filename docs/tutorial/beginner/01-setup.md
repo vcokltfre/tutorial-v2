@@ -1,6 +1,6 @@
 # Creating a Bot User
 
-!!! Warning
+!!! Info
 
     To create a bot application your Discord account must have a verified email address. It is also recommended that you enable 2-factor-authentication to secure your account.
 
@@ -48,7 +48,7 @@ Finally for this part, you need to add your bot to your server. To do this you f
 
 Now you’ll want to choose permissions for your bot based on what you want it to do. For WumpusBot, I’ll start by giving it `Send Messages`, `Embed Links`, `Attach Files`, `Manage Messages`, and `Add Reactions`, although we may need more permissions later, but that will be handled within Discord itself.
 
-!!! Danger
+!!! Warning
 
     There are almost no circumstances under which your bot will ever need the `Administrator` permission. If you do not absolutely need it, you should not have it, as bots with administrator can destroy servers in seconds by deleting channels, mass-banning members, and a multitude of other unpleasant actions.
 

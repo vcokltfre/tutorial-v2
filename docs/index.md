@@ -27,7 +27,7 @@ For specific help with each of these libraries please join their respective supp
 
     This is a tutorial intended for beginners to advanced bot developers, however it is *not* meant for beginner programmers, and contains advanced topics such as asynchronous programming. It is recommended that you have a firm grasp on Python and some of its more advanced concepts before you start developing bots, but it is not a hard requirement. If you have persistence and the willingness to learn and search for things you don't understand as you go along, you can learn both Python and bot development at the same time.
 
-!!! Warning
+!!! Note
 
     This tutorial is a guide to help you create bots, it is not meant for you to copy the code of, as this does not help you learn. I highly recommend that you do not directly copy code from here, since it will not help in the long run.
 
