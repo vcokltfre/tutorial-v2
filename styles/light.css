@@ -55,6 +55,8 @@
     --md-footer-fg-color: var(--md-default-fg-color);
     --md-footer-bg-color: rgb(227, 229, 232);
     --md-footer-bg-color--dark: var(--md-default-fg-color--light);
+
+    --dmsg-color: #000;
 }
 
 label.md-nav__link,
