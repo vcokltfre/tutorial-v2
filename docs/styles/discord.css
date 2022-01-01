@@ -1,0 +1,85 @@
+.d-msg {
+    border-radius: 0.4rem;
+    border: 0.07rem solid var(--md-primary-fg-color);
+    padding: 0.5rem;
+}
+
+.d-msg-slash {
+    position: relative;
+    left: 1rem;
+}
+
+.d-msg-slash, .d-msg-slash-author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.d-msg-slash-arr {
+    border-top-left-radius: 0.15rem;
+    border: 0.1rem solid grey;
+    padding: 0.25rem;
+    width: 1rem;
+    border-bottom: none;
+    border-right: none;
+}
+
+.d-msg-slash-author {
+    position: relative;
+    top: -0.25rem;
+    font-size: 80%;
+    color: lightgrey;
+}
+
+.d-msg-slash-used {
+    color: rgb(160, 160, 160);
+    margin-left: 0.15rem;
+    margin-right: 0.15rem;
+}
+
+.d-msg-slash-author img {
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.25rem;
+}
+
+.d-msg-slash-command {
+    color: #1581ad;
+}
+
+.d-msg-author-pfp img {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+}
+
+.d-msg-body {
+    display: flex;
+    flex-direction: row;
+}
+
+.d-msg-author-name {
+    font-size: 80%;
+    margin-left: 0.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.d-msg-author-bot {
+    background-color: #5865f2;
+    color: #ffffff;
+    border-radius: 0.15rem;
+    font-size: 75%;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    height: 0.7rem;
+    margin-left: 0.15rem;
+}
+
+.d-msg-content {
+    margin-left: 0.25rem;
+    font-size: 80%;
+    color: #dddddd;
+}

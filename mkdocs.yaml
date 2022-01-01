@@ -29,6 +29,7 @@ extra_css:
     - styles/light.css
     - styles/dark.css
     - styles/common.css
+    - styles/discord.css
 
 markdown_extensions:
   - pymdownx.highlight
