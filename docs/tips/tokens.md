@@ -127,7 +127,6 @@ For JSON it's more simple than YAML since no non-standard modules are needed, si
     }
     ```
 
-
 === "main.py"
 
     ```py
