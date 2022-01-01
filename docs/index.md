@@ -16,6 +16,11 @@ This tutorial aims to cover 2 main libraries at the same time, Nextcord and Disn
     import disnake
     ```
 
+For specific help with each of these libraries please join their respective support servers:
+
+- [Nextcord](https://discord.gg/nextcord)
+- [Disnake](https://disnake.dev/discord)
+
 ---
 
 !!! Warning
