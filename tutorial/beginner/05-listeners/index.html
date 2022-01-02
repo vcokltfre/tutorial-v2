@@ -10,21 +10,21 @@
       
       
       
-        <link rel="canonical" href="https://tutorial-alpha.vcokltfre.dev/">
+        <link rel="canonical" href="https://tutorial-alpha.vcokltfre.dev/tutorial/beginner/05-listeners/">
       
-      <link rel="icon" href="assets/tutorial.svg">
+      <link rel="icon" href="../../../assets/tutorial.svg">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
-        <title>Discord Bot Tutorial</title>
+        <title>Event Listeners - Discord Bot Tutorial</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.edf004c2.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -38,15 +38,15 @@
       
     
     
-      <link rel="stylesheet" href="styles/light.css">
+      <link rel="stylesheet" href="../../../styles/light.css">
     
-      <link rel="stylesheet" href="styles/dark.css">
+      <link rel="stylesheet" href="../../../styles/dark.css">
     
-      <link rel="stylesheet" href="styles/common.css">
+      <link rel="stylesheet" href="../../../styles/common.css">
     
-      <link rel="stylesheet" href="styles/discord.css">
+      <link rel="stylesheet" href="../../../styles/discord.css">
     
-    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#home" class="md-skip">
+        <a href="#event-listeners" class="md-skip">
           Skip to content
         </a>
       
@@ -88,9 +88,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Discord Bot Tutorial" class="md-header__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
+    <a href="../../.." title="Discord Bot Tutorial" class="md-header__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
       
-  <img src="assets/tutorial.svg" alt="logo">
+  <img src="../../../assets/tutorial.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Event Listeners
             
           </span>
         </div>
@@ -207,9 +207,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Discord Bot Tutorial" class="md-nav__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
+    <a href="../../.." title="Discord Bot Tutorial" class="md-nav__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
       
-  <img src="assets/tutorial.svg" alt="logo">
+  <img src="../../../assets/tutorial.svg" alt="logo">
 
     </a>
     Discord Bot Tutorial
@@ -235,21 +235,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
-      
     </li>
   
 
@@ -262,7 +252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="credits/" class="md-nav__link">
+      <a href="../../../credits/" class="md-nav__link">
         Credits
       </a>
     </li>
@@ -303,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tips/tokens/" class="md-nav__link">
+      <a href="../../../tips/tokens/" class="md-nav__link">
         Storing Tokens and Secrets
       </a>
     </li>
@@ -323,12 +313,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -351,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         Tutorial - Home
       </a>
     </li>
@@ -363,12 +355,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
       
       
       
@@ -391,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/beginner/01-setup/" class="md-nav__link">
+      <a href="../01-setup/" class="md-nav__link">
         Creating a Bot User
       </a>
     </li>
@@ -405,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/beginner/02-overview/" class="md-nav__link">
+      <a href="../02-overview/" class="md-nav__link">
         An Overview of Discord
       </a>
     </li>
@@ -419,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/beginner/03-hello/" class="md-nav__link">
+      <a href="../03-hello/" class="md-nav__link">
         Hello, world
       </a>
     </li>
@@ -433,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/beginner/04-pong/" class="md-nav__link">
+      <a href="../04-pong/" class="md-nav__link">
         A Ping Command
       </a>
     </li>
@@ -445,11 +439,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="tutorial/beginner/05-listeners/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Event Listeners
       </a>
+      
     </li>
   
 
@@ -498,41 +502,86 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/vcokltfre/tutorial-v2/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/vcokltfre/tutorial-v2/edit/master/docs/tutorial/beginner/05-listeners.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="home">Home<a class="headerlink" href="#home" title="Permanent link">&para;</a></h1>
-<p>This is a tutorial to guide you through the process of creating your very own functional Discord bot in Python. It aims to help you understand the basic concepts of making a Discord bot, and help you all the way up to advanced concepts and features.</p>
-<p>This tutorial aims to cover 2 main libraries at the same time, Nextcord and Disnake. Multiple code tabs will be used to show each library's implementation of the feature being explained, looking like this:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">nextcord.py</label><label for="__tabbed_1_2">disnake.py</label></div>
+<h1 id="event-listeners">Event Listeners<a class="headerlink" href="#event-listeners" title="Permanent link">&para;</a></h1>
+<p>While a lot of bot functionality can be implemented with slash commands, there are features that cannot be implemented like this. For example if you want to delete messages containing a certain keyword, you cannot do that with slash commands, but you can do it with listeners for other events, such as messages.</p>
+<p>Just like previous parts we'll want a basic bot to be set up. In this example we will be automatically deleting any message that contains the word "badword" in it. For simplicity I have removed the ping command from the basic bots below.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Nextcord</label><label for="__tabbed_1_2">Disnake</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">nextcord</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">nextcord</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+
+<span class="nd">@client</span><span class="o">.</span><span class="n">slash_command</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A simple hello command.&quot;</span><span class="p">,</span>
+    <span class="n">guild_ids</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">nextcord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+
+<span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;YOUR_BOT_TOKEN&quot;</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">disnake</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">disnake</span> <span class="kn">import</span> <span class="n">ApplicationCommandInteraction</span><span class="p">,</span> <span class="n">Message</span>
+<span class="kn">from</span> <span class="nn">disnake.ext.commands</span> <span class="kn">import</span> <span class="n">Bot</span>
+
+<span class="n">bot</span> <span class="o">=</span> <span class="n">Bot</span><span class="p">()</span>
+
+<span class="nd">@bot</span><span class="o">.</span><span class="n">slash_command</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A simple hello command.&quot;</span><span class="p">,</span>
+    <span class="n">guild_ids</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">ApplicationCommandInteraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+
+<span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;YOUR_BOT_TOKEN&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We are importing <code>Message</code> here so that we can typehint the <code>message</code> parameter of the <code>on_message</code> listener later on.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Next we'll create a listener that will delete any message that contains the word "badword" in it, again this is inserted just above the <code>bot.run()</code> call:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Nextcord</label><label for="__tabbed_2_2">Disnake</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_message</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">nextcord</span><span class="o">.</span><span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;badword&quot;</span> <span class="ow">in</span> <span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nd">@bot</span><span class="o">.</span><span class="n">event</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_message</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;badword&quot;</span> <span class="ow">in</span> <span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
 </code></pre></div>
 </div>
 </div>
 </div>
-<p>For specific help with each of these libraries please join their respective support servers:</p>
+<p>Here's a breakdown of what we're doing here:</p>
 <ul>
-<li><a href="https://discord.gg/nextcord" rel="noopener" target="_blank">Nextcord</a></li>
-<li><a href="https://disnake.dev/discord" rel="noopener" target="_blank">Disnake</a></li>
+<li><code>@bot.event</code> is a decorator which tells Disnake that this is an event listener.</li>
+<li><code>async def on_message(message: Message) -&gt; None</code> is the function which will be called when the event is triggered.</li>
+<li><code>message</code> is the message that triggered the event.</li>
+<li><code>if "badword" in message.content</code> is a check to see if the message contains the word "badword" in it.</li>
+<li><code>await message.delete()</code> is the response which will be sent to the user.</li>
 </ul>
-<hr />
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is a tutorial intended for beginners to advanced bot developers, however it is <em>not</em> meant for beginner programmers, and contains advanced topics such as asynchronous programming. It is recommended that you have a firm grasp on Python and some of its more advanced concepts before you start developing bots, but it is not a hard requirement. If you have persistence and the willingness to learn and search for things you don't understand as you go along, you can learn both Python and bot development at the same time.</p>
-</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This tutorial is a guide to help you create bots, it is not meant for you to copy the code of, as this does not help you learn. I highly recommend that you do not directly copy code from here, since it will not help in the long run.</p>
+<p>This is a very simple example of using a listener for events. Much more complex tasks can be achieved using listeners, but they are out of scope for this beginner part. More complex examples will be given in later intermediate parts.</p>
 </div>
-<p><a class="md-button" href="/tutorial">Start the Tutorial!</a></p>
 
               
             </article>
@@ -545,21 +594,21 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-      
         
-        <a href="credits/" class="md-footer__link md-footer__link--next" aria-label="Next: Credits" rel="next">
+        <a href="../04-pong/" class="md-footer__link md-footer__link--prev" aria-label="Previous: A Ping Command" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                Next
+                Previous
               </span>
-              Credits
+              A Ping Command
             </div>
           </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
         </a>
+      
       
     </nav>
   
@@ -609,10 +658,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e1a181d9.min.js"></script>
       
     
   </body>
