@@ -562,7 +562,7 @@
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nd">@bot</span><span class="o">.</span><span class="n">event</span>
+<div class="highlight"><pre><span></span><code><span class="nd">@bot</span><span class="o">.</span><span class="n">listener</span><span class="p">()</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">on_message</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="k">if</span> <span class="s2">&quot;badword&quot;</span> <span class="ow">in</span> <span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
         <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
@@ -572,7 +572,7 @@
 </div>
 <p>Here's a breakdown of what we're doing here:</p>
 <ul>
-<li><code>@bot.event</code> is a decorator which tells Disnake that this is an event listener.</li>
+<li><code>@bot.listener()</code> is a decorator which tells Disnake that this is an event listener.</li>
 <li><code>async def on_message(message: Message) -&gt; None</code> is the function which will be called when the event is triggered.</li>
 <li><code>message</code> is the message that triggered the event.</li>
 <li><code>if "badword" in message.content</code> is a check to see if the message contains the word "badword" in it.</li>
