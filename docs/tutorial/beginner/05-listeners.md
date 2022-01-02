@@ -59,7 +59,7 @@ Next we'll create a listener that will delete any message that contains the word
 === "Disnake"
 
     ```py
-    @bot.event
+    @bot.listener()
     async def on_message(message: Message) -> None:
         if "badword" in message.content:
             await message.delete()
@@ -67,7 +67,7 @@ Next we'll create a listener that will delete any message that contains the word
 
 Here's a breakdown of what we're doing here:
 
-- `@bot.event` is a decorator which tells Disnake that this is an event listener.
+- `@bot.listener()` is a decorator which tells Disnake that this is an event listener.
 - `async def on_message(message: Message) -> None` is the function which will be called when the event is triggered.
 - `message` is the message that triggered the event.
 - `if "badword" in message.content` is a check to see if the message contains the word "badword" in it.
