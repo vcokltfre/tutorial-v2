@@ -71,7 +71,7 @@ Here's a breakdown of what we're doing here:
 - `async def on_message(message: Message) -> None` is the function which will be called when the event is triggered.
 - `message` is the message that triggered the event.
 - `if "badword" in message.content` is a check to see if the message contains the word "badword" in it.
-- `await message.delete()` is the response which will be sent to the user.
+- `await message.delete()` deletes the message the user sent.
 
 !!! Note
 
