@@ -4,7 +4,7 @@
 
     To create a bot application your Discord account must have a verified email address. It is also recommended that you enable 2-factor-authentication to secure your account.
 
-The first step in creating a bot is to head over to the [Discord Developer Portal](https://discordapp.com/developers/applications/me) where you'll be asked to log in to your Discord account if you're not already signed in. Obce you've logged in you'll see a screen like this:
+The first step in creating a bot is to head over to the [Discord Developer Portal](https://discordapp.com/developers/applications/me) where you'll be asked to log in to your Discord account if you're not already signed in. Once you've logged in you'll see a screen like this:
 
 ![Discord Developer Portal](/assets/img/dev_portal_1.png){ .d-img }
 
