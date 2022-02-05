@@ -506,6 +506,53 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_2" type="checkbox" id="__nav_4_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_2">
+          Disnake
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Disnake" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Disnake
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/disnake/11-cogs/" class="md-nav__link">
+        Cogs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -576,7 +623,7 @@
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">disnake</span> <span class="kn">import</span> <span class="n">ApplicationCommandInteraction</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">disnake</span> <span class="kn">import</span> <span class="n">CommandInteraction</span>
 <span class="kn">from</span> <span class="nn">disnake.ext.commands</span> <span class="kn">import</span> <span class="n">Bot</span>
 
 <span class="n">bot</span> <span class="o">=</span> <span class="n">Bot</span><span class="p">()</span>
@@ -586,7 +633,7 @@
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A simple hello command.&quot;</span><span class="p">,</span>
     <span class="n">guild_ids</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
 <span class="p">)</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">ApplicationCommandInteraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">CommandInteraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
 
 <span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;YOUR_BOT_TOKEN&quot;</span><span class="p">)</span>
@@ -615,7 +662,7 @@
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A simple ping command.&quot;</span><span class="p">,</span>
     <span class="n">guild_ids</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
 <span class="p">)</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">ping</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">ApplicationCommandInteraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">ping</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">CommandInteraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </code></pre></div>
 <p>And next we'll add in the magical line which shows us the bot's latency:</p>
 <div class="highlight"><pre><span></span><code>    <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pong! </span><span class="si">{</span><span class="n">bot</span><span class="o">.</span><span class="n">latency</span> <span class="o">*</span> <span class="mi">1000</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">ms&quot;</span><span class="p">)</span>

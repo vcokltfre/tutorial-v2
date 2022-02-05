@@ -10,21 +10,21 @@
       
       
       
-        <link rel="canonical" href="https://tutorial-alpha.vcokltfre.dev/tutorial/beginner/05-listeners/">
+        <link rel="canonical" href="https://tutorial-alpha.vcokltfre.dev/tutorial/intermediate/disnake/11-cogs/">
       
-      <link rel="icon" href="../../../assets/tutorial.svg">
+      <link rel="icon" href="../../../../assets/tutorial.svg">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
-        <title>Event Listeners - Discord Bot Tutorial</title>
+        <title>Cogs - Discord Bot Tutorial</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.edf004c2.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -38,15 +38,15 @@
       
     
     
-      <link rel="stylesheet" href="../../../styles/light.css">
+      <link rel="stylesheet" href="../../../../styles/light.css">
     
-      <link rel="stylesheet" href="../../../styles/dark.css">
+      <link rel="stylesheet" href="../../../../styles/dark.css">
     
-      <link rel="stylesheet" href="../../../styles/common.css">
+      <link rel="stylesheet" href="../../../../styles/common.css">
     
-      <link rel="stylesheet" href="../../../styles/discord.css">
+      <link rel="stylesheet" href="../../../../styles/discord.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#event-listeners" class="md-skip">
+        <a href="#cogs" class="md-skip">
           Skip to content
         </a>
       
@@ -88,9 +88,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Discord Bot Tutorial" class="md-header__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
+    <a href="../../../.." title="Discord Bot Tutorial" class="md-header__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
       
-  <img src="../../../assets/tutorial.svg" alt="logo">
+  <img src="../../../../assets/tutorial.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Event Listeners
+              Cogs
             
           </span>
         </div>
@@ -207,9 +207,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Discord Bot Tutorial" class="md-nav__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
+    <a href="../../../.." title="Discord Bot Tutorial" class="md-nav__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
       
-  <img src="../../../assets/tutorial.svg" alt="logo">
+  <img src="../../../../assets/tutorial.svg" alt="logo">
 
     </a>
     Discord Bot Tutorial
@@ -237,7 +237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -252,7 +252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../credits/" class="md-nav__link">
+      <a href="../../../../credits/" class="md-nav__link">
         Credits
       </a>
     </li>
@@ -293,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tips/tokens/" class="md-nav__link">
+      <a href="../../../../tips/tokens/" class="md-nav__link">
         Storing Tokens and Secrets
       </a>
     </li>
@@ -343,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../../" class="md-nav__link">
         Tutorial - Home
       </a>
     </li>
@@ -355,14 +355,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
       
       
       
@@ -385,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-setup/" class="md-nav__link">
+      <a href="../../../beginner/01-setup/" class="md-nav__link">
         Creating a Bot User
       </a>
     </li>
@@ -399,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-overview/" class="md-nav__link">
+      <a href="../../../beginner/02-overview/" class="md-nav__link">
         An Overview of Discord
       </a>
     </li>
@@ -413,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-hello/" class="md-nav__link">
+      <a href="../../../beginner/03-hello/" class="md-nav__link">
         Hello, world
       </a>
     </li>
@@ -427,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-pong/" class="md-nav__link">
+      <a href="../../../beginner/04-pong/" class="md-nav__link">
         A Ping Command
       </a>
     </li>
@@ -439,21 +437,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../beginner/05-listeners/" class="md-nav__link">
         Event Listeners
       </a>
-      
     </li>
   
 
@@ -470,12 +458,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
       
       
       
@@ -498,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         Intermediate - Home
       </a>
     </li>
@@ -510,12 +500,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_2" type="checkbox" id="__nav_4_3_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_2" type="checkbox" id="__nav_4_3_2" checked>
       
       
       
@@ -536,11 +528,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../intermediate/disnake/11-cogs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Cogs
       </a>
+      
     </li>
   
 
@@ -596,86 +598,93 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/vcokltfre/tutorial-v2/edit/master/docs/tutorial/beginner/05-listeners.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/vcokltfre/tutorial-v2/edit/master/docs/tutorial/intermediate/disnake/11-cogs.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="event-listeners">Event Listeners<a class="headerlink" href="#event-listeners" title="Permanent link">&para;</a></h1>
-<p>While a lot of bot functionality can be implemented with slash commands, there are features that cannot be implemented like this. For example if you want to delete messages containing a certain keyword, you cannot do that with slash commands, but you can do it with listeners for other events, such as messages.</p>
-<p>Just like previous parts we'll want a basic bot to be set up. In this example we will be automatically deleting any message that contains the word "badword" in it. For simplicity I have removed the ping command from the basic bots below.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Nextcord</label><label for="__tabbed_1_2">Disnake</label></div>
+<h1 id="cogs">Cogs<a class="headerlink" href="#cogs" title="Permanent link">&para;</a></h1>
+<p>Cogs are an important part of Disnake which allow you to organise your events and commands into different files. They represent a fairly drastic change in how you write your events, commands, and bots, so it's useful to do them early on before you have too much logic in your main file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Cogs require a basic understanding of OOP/classes in Python. If you're not familiar with this, check out the first video in <a href="https://www.youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc" rel="noopener" target="_blank">Corey Schafer's OOP Tutorial</a>.</p>
+</div>
+<p>Now that we're using cogs we're going to abandon most of the code we have from previous parts, since it needs to change significantly to be used with cogs, and some of the functionality we've impelemnted so far isn't very useful anyway.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this part I'll refer to cogs and extensions, and the difference between both is important. A cog is a single class that inherits from <code>Cog</code>, which encapsulates commands and events. An extension is a collection of cogs which has a setup function and can be loaded via the bot's <code>load_extension</code> method, although you will often find extensions with just one cog.</p>
+</div>
+<p>As with the previous parts we need to create a bot object, we'll do this in a file named <code>main.py</code>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">main.py</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">nextcord</span>
-
-<span class="n">client</span> <span class="o">=</span> <span class="n">nextcord</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
-
-<span class="nd">@client</span><span class="o">.</span><span class="n">slash_command</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A simple hello command.&quot;</span><span class="p">,</span>
-    <span class="n">guild_ids</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
-<span class="p">)</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">nextcord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
-
-<span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;YOUR_BOT_TOKEN&quot;</span><span class="p">)</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">disnake</span> <span class="kn">import</span> <span class="n">CommandInteraction</span><span class="p">,</span> <span class="n">Message</span>
-<span class="kn">from</span> <span class="nn">disnake.ext.commands</span> <span class="kn">import</span> <span class="n">Bot</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">disnake.ext.commands</span> <span class="kn">import</span> <span class="n">Bot</span>
 
 <span class="n">bot</span> <span class="o">=</span> <span class="n">Bot</span><span class="p">()</span>
 
-<span class="nd">@bot</span><span class="o">.</span><span class="n">slash_command</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A simple hello command.&quot;</span><span class="p">,</span>
-    <span class="n">guild_ids</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
-<span class="p">)</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">CommandInteraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+<span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;YOUR_BOT_TOKEN&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Now, we need to create a file that we'll put our cog in, let's call it <code>ping.py</code> as we'll be putting a basic ping command in here:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">ping.py</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">disnake.ext.commands</span> <span class="kn">import</span> <span class="n">Bot</span><span class="p">,</span> <span class="n">Cog</span><span class="p">,</span> <span class="n">CommandInteraction</span><span class="p">,</span> <span class="n">slash_command</span>
+
+
+<span class="k">class</span> <span class="nc">Ping</span><span class="p">(</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bot</span><span class="p">:</span> <span class="n">Bot</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">bot</span>
+
+    <span class="nd">@slash_command</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;ping&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A simple ping command.&quot;</span><span class="p">,</span> <span class="n">guild_ids</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">])</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">ping</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inter</span><span class="p">:</span> <span class="n">CommandInteraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pong! </span><span class="si">{</span><span class="n">bot</span><span class="o">.</span><span class="n">latency</span> <span class="o">*</span> <span class="mi">1000</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">ms&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>As you can probably see, a lot of this is similar to the ping command we made in part 4 of the beginner section. There are a couple of important parts to explain which are different:</p>
+<ul>
+<li>We're now using the <code>slash_command</code> decorator from <code>disnake.ext.commands</code>. We can no longer use the <code>bot</code> object to make decorators since we don't have the bot object as it's in another file.</li>
+<li>Everything is now in a class. This is a fundamental part of cogs, all of their functionality is encapsulated within a class.</li>
+</ul>
+<p>In this section of code:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Ping</span><span class="p">(</span><span class="n">Cog</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bot</span><span class="p">:</span> <span class="n">Bot</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bot</span> <span class="o">=</span> <span class="n">bot</span>
+</code></pre></div>
+<p>What we're doing is defining a new cog, and letting it take a bot object in its constructor. We're doing this so that we can then access that bot object for the ping command so we can retrieve the bot's websocket latency.</p>
+<p>We still have a final piece of code we need to add to the cog's file in order for the cog to be registered, a <code>setup</code> function:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">ping.py</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># This goes at the bottom of the file.</span>
+
+<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bot</span><span class="p">:</span> <span class="n">Bot</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">bot</span><span class="o">.</span><span class="n">add_cog</span><span class="p">(</span><span class="n">Ping</span><span class="p">(</span><span class="n">bot</span><span class="p">))</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>This function is what disnake looks for when loading an extension, and the function signature will always be <code>setup(self, bot: Bot) -&gt; None</code>.</p>
+<p>Finally, we need to load the cog in our main file:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">main.py</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">disnake.ext.commands</span> <span class="kn">import</span> <span class="n">Bot</span>
+
+<span class="n">bot</span> <span class="o">=</span> <span class="n">Bot</span><span class="p">()</span>
+
+<span class="n">bot</span><span class="o">.</span><span class="n">load_extension</span><span class="p">(</span><span class="s2">&quot;ping&quot;</span><span class="p">)</span>
 
 <span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;YOUR_BOT_TOKEN&quot;</span><span class="p">)</span>
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We are importing <code>Message</code> here so that we can typehint the <code>message</code> parameter of the <code>on_message</code> listener later on.</p>
 </div>
 </div>
 </div>
-</div>
-<p>Next we'll create a listener that will delete any message that contains the word "badword" in it, again this is inserted just above the <code>bot.run()</code> call:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Nextcord</label><label for="__tabbed_2_2">Disnake</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nd">@client</span><span class="o">.</span><span class="n">event</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">on_message</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">nextcord</span><span class="o">.</span><span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="k">if</span> <span class="s2">&quot;badword&quot;</span> <span class="ow">in</span> <span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
-        <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nd">@bot</span><span class="o">.</span><span class="n">listener</span><span class="p">()</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">on_message</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="k">if</span> <span class="s2">&quot;badword&quot;</span> <span class="ow">in</span> <span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
-        <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<p>Here's a breakdown of what we're doing here:</p>
-<ul>
-<li><code>@bot.listener()</code> is a decorator which tells Disnake that this is an event listener.</li>
-<li><code>async def on_message(message: Message) -&gt; None</code> is the function which will be called when the event is triggered.</li>
-<li><code>message</code> is the message that triggered the event.</li>
-<li><code>if "badword" in message.content</code> is a check to see if the message contains the word "badword" in it.</li>
-<li><code>await message.delete()</code> deletes the message the user sent.</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is a very simple example of using a listener for events. Much more complex tasks can be achieved using listeners, but they are out of scope for this beginner part. More complex examples will be given in later intermediate parts.</p>
-</div>
+<p>Note that when loading an extension we omit the <code>.py</code> extension. Extensions are loaded via Python imports behind the scenes, so we reference them in the same way we would write an import. If you have an extension in <code>./cogs/ping.py</code> you would load it with <code>bot.load_extension("cogs.ping")</code>.</p>
 
               
             </article>
@@ -689,7 +698,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../04-pong/" class="md-footer__link md-footer__link--prev" aria-label="Previous: A Ping Command" rel="prev">
+        <a href="../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intermediate - Home" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -698,26 +707,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              A Ping Command
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../intermediate/" class="md-footer__link md-footer__link--next" aria-label="Next: Intermediate - Home" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
               Intermediate - Home
             </div>
           </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
         </a>
+      
       
     </nav>
   
@@ -767,10 +761,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.e1a181d9.min.js"></script>
       
     
   </body>
