@@ -41,10 +41,10 @@ In this part we'll create a basic slash command which just responds with "Hello,
 
 === "Disnake"
 
-    To start off with slash commands in Disnake we'll need to import the `commands.Bot` class, and also the `ApplicationCommandInteraction` class for later use when defining the command:
+    To start off with slash commands in Disnake we'll need to import the `commands.Bot` class, and also the `CommandInteraction` class for later use when defining the command:
 
     ```py
-    from disnake import ApplicationCommandInteraction
+    from disnake import CommandInteraction
     from disnake.ext.commands import Bot
 
     bot = Bot()
@@ -62,7 +62,7 @@ In this part we'll create a basic slash command which just responds with "Hello,
         description="A simple hello command.",
         guild_ids=[...],
     )
-    async def hello(inter: ApplicationCommandInteraction) -> None:
+    async def hello(inter: CommandInteraction) -> None:
         await inter.send("Hello!")
     ```
 
@@ -72,7 +72,7 @@ In this part we'll create a basic slash command which just responds with "Hello,
     - `name="hello"` is the name of the command.
     - `description="A simple hello command."` is the description of the command.
     - `guild_ids=[...]` is a list of guild IDs which the command is registered in, these should be int IDs of the guilds you want to register the command in. If this is empty it will be registered in all guilds, taking up to an hour to globally register.
-    - `async def hello(inter: ApplicationCommandInteraction) -> None` is the function which will be called when the command is triggered.
+    - `async def hello(inter: CommandInteraction) -> None` is the function which will be called when the command is triggered.
     - `await inter.send("Hello!")` is the response which will be sent to the user.
 
     Finally, we can connect our bot to Discord by using `Bot.run()`:

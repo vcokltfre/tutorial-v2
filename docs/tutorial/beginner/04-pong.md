@@ -25,7 +25,7 @@ Here's the code from the previous part:
 === "Disnake"
 
     ```py
-    from disnake import ApplicationCommandInteraction
+    from disnake import CommandInteraction
     from disnake.ext.commands import Bot
 
     bot = Bot()
@@ -35,7 +35,7 @@ Here's the code from the previous part:
         description="A simple hello command.",
         guild_ids=[...],
     )
-    async def hello(inter: ApplicationCommandInteraction) -> None:
+    async def hello(inter: CommandInteraction) -> None:
         await inter.response.send_message("Hello!")
 
     bot.run("YOUR_BOT_TOKEN")
@@ -68,7 +68,7 @@ The code we will be writing in a second will go just above the `bot.run()` call.
         description="A simple ping command.",
         guild_ids=[...],
     )
-    async def ping(inter: ApplicationCommandInteraction) -> None:
+    async def ping(inter: CommandInteraction) -> None:
     ```
 
     And next we'll add in the magical line which shows us the bot's latency:

@@ -25,7 +25,7 @@ Just like previous parts we'll want a basic bot to be set up. In this example we
 === "Disnake"
 
     ```py
-    from disnake import ApplicationCommandInteraction, Message
+    from disnake import CommandInteraction, Message
     from disnake.ext.commands import Bot
 
     bot = Bot()
@@ -35,7 +35,7 @@ Just like previous parts we'll want a basic bot to be set up. In this example we
         description="A simple hello command.",
         guild_ids=[...],
     )
-    async def hello(inter: ApplicationCommandInteraction) -> None:
+    async def hello(inter: CommandInteraction) -> None:
         await inter.response.send_message("Hello!")
 
     bot.run("YOUR_BOT_TOKEN")

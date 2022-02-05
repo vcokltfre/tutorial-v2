@@ -6,5 +6,5 @@ This section of the tutorial is for intermediate users of Nextcord and Disnake. 
 
     From this point onwards only library features will be explained. All Python feature knowledge is assumed.
 
-[Continue for Nextcord](/tutorial/intermediate/nextcord){ .md-button .md-button--primary }
-[Continue for Disnake](/tutorial/intermediate/disnake){ .md-button .md-button--primary }
+[Continue for Nextcord](/tutorial/intermediate/nextcord/11-cogs){ .md-button .md-button--primary }
+[Continue for Disnake](/tutorial/intermediate/disnake/11-cogs){ .md-button .md-button--primary }
