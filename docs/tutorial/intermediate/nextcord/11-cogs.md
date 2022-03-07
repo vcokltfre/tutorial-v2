@@ -1,6 +1,6 @@
 # Cogs
 
-Cogs are an important part of Disnake which allow you to organise your events and commands into different files. They represent a fairly drastic change in how you write your events, commands, and bots, so it's useful to do them early on before you have too much logic in your main file.
+Cogs are an important part of Nextcord which allow you to organise your events and commands into different files. They represent a fairly drastic change in how you write your events, commands, and bots, so it's useful to do them early on before you have too much logic in your main file.
 
 !!! Note
 
@@ -17,7 +17,7 @@ As with the previous parts we need to create a bot object, we'll do this in a fi
 === "main.py"
 
     ```py
-    from disnake.ext.commands import Bot
+    from nextcord.ext.commands import Bot
 
     bot = Bot()
 
@@ -29,7 +29,8 @@ Now, we need to create a file that we'll put our cog in, let's call it `ping.py`
 === "ping.py"
 
     ```py
-    from disnake.ext.commands import Bot, Cog, CommandInteraction, slash_command
+    from nextcord import Interaction, slash_command
+    from nextcord.ext.commands import Bot, Cog
 
 
     class Ping(Cog):
@@ -37,13 +38,13 @@ Now, we need to create a file that we'll put our cog in, let's call it `ping.py`
             self.bot = bot
 
         @slash_command(name="ping", description="A simple ping command.", guild_ids=[...])
-        async def ping(self, inter: CommandInteraction) -> None:
+        async def ping(self, inter: Interaction) -> None:
             await inter.send(f"Pong! {self.bot.latency * 1000:.2f}ms")
     ```
 
 As you can probably see, a lot of this is similar to the ping command we made in part 4 of the beginner section. There are a couple of important parts to explain which are different:
 
-- We're now using the `slash_command` decorator from `disnake.ext.commands`. We can no longer use the `bot` object to make decorators since we don't have the bot object as it's in another file.
+- We're now using the `slash_command` decorator . We can no longer use the `bot` object to make decorators since we don't have the bot object as it's in another file.
 - Everything is now in a class. This is a fundamental part of cogs, all of their functionality is encapsulated within a class.
 
 In this section of code:
@@ -67,14 +68,14 @@ We still have a final piece of code we need to add to the cog's file in order fo
         bot.add_cog(Ping(bot))
     ```
 
-This function is what disnake looks for when loading an extension, and the function signature will always be `setup(self, bot: Bot) -> None`.
+This function is what nextcord looks for when loading an extension, and the function signature will always be `setup(self, bot: Bot) -> None`.
 
 Finally, we need to load the cog in our main file:
 
 === "main.py"
 
     ```py
-    from disnake.ext.commands import Bot
+    from nextcord.ext.commands import Bot
 
     bot = Bot()
 
