@@ -11,6 +11,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://tutorial-alpha.vcokltfre.dev/tips/mentions/</loc>
+         <lastmod>2022-03-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tutorial-alpha.vcokltfre.dev/tips/storage/</loc>
+         <lastmod>2022-03-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://tutorial-alpha.vcokltfre.dev/tips/tokens/</loc>
          <lastmod>2022-03-07</lastmod>
          <changefreq>daily</changefreq>
@@ -52,6 +62,11 @@
     </url>
     <url>
          <loc>https://tutorial-alpha.vcokltfre.dev/tutorial/intermediate/disnake/11-cogs/</loc>
+         <lastmod>2022-03-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://tutorial-alpha.vcokltfre.dev/tutorial/intermediate/nextcord/11-cogs/</loc>
          <lastmod>2022-03-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
