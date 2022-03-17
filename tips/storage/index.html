@@ -835,7 +835,7 @@
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If you have one takeaway from this, let it be that JSON is <strong>not</strong> a database, and does not work as one, nor does CSV, or plain text files. JSON works well as a data transfer format, or for config files, but is not made for storing changeable persistent data.</p>
-<p>In addition to this, spreadsheets are not databases either. Neither Excel nor Google Sheets are acceptable replacements for actual databases. If I hear that you, the reader, is using a spreadhseet as a database I will feel very bad please do not do this!</p>
+<p>In addition to this, spreadsheets are not databases either. Neither Excel nor Google Sheets are acceptable replacements for actual databases. If I hear that you, the reader, is using a spreadsheet as a database I will feel very bad please do not do this!</p>
 </div>
 <h2 id="databases-you-can-use">Databases You Can Use<a class="headerlink" href="#databases-you-can-use" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
@@ -846,17 +846,17 @@
 <p>Postgres is a popular SQL database due to its large feature set and efficiency, and is generally a good choice when storing data in a bot.</p>
 <p>To use postgres in your bot you'll want to use a client library such as <a href="https://pypi.org/project/asyncpg/" rel="noopener" target="_blank">asyncpg</a> which provides an easy interface for interacting with Postgres.</p>
 <h3 id="mysql-mariadb">MySQL / MariaDB<a class="headerlink" href="#mysql-mariadb" title="Permanent link">&para;</a></h3>
-<p>MySQL or it's younger sibling MariaDB are also popular SQL databases which are also extremely commonly used. For most bots there will be no noticable difference between MySQL-based and Postgres, so it's really up to personal preference</p>
+<p>MySQL or it's younger sibling MariaDB are also popular SQL databases which are also extremely commonly used. For most bots there will be no noticeable difference between MySQL-based and Postgres, so it's really up to personal preference</p>
 <p>To use MySQL or MariaDB in your bot you'll want the <a href="https://pypi.org/project/aiomysql/" rel="noopener" target="_blank">aiomysql</a> client library, which also provides an easy interface for interacting with MySQL.</p>
 <h3 id="aiosqlite">aiosqlite<a class="headerlink" href="#aiosqlite" title="Permanent link">&para;</a></h3>
 <p>SQLite is a simple, fast, local database. It's a SQL database and can be easily used just about anywhere. It has similar use cases to the databases listed above. To use aiosqlite in your own bot you'll need the <a href="https://readthedocs.org/projects/aiosqlite/" rel="noopener" target="_blank">aiosqlite</a> package installed.</p>
 <h3 id="mongodb">MongoDB<a class="headerlink" href="#mongodb" title="Permanent link">&para;</a></h3>
-<p>MongoDB is a document store, not a relational database like MySQL or PostgreSQL, which means its usecases are slightly different. MongoDB is primarily for storing JSON-like objects but in a proper database so you don't need to handle file storage and other general shenanigans when storing data.</p>
+<p>MongoDB is a document store, not a relational database like MySQL or PostgreSQL, which means its use cases are slightly different. MongoDB is primarily for storing JSON-like objects but in a proper database so you don't need to handle file storage and other general shenanigans when storing data.</p>
 <p>To use MongoDB in your bot you'll want to use the <a href="https://pypi.org/project/motor/" rel="noopener" target="_blank">motor</a> client library. Motor also provides an easy interface for interacting with MongoDB, but in a very different way to the previous SQL databases mentioned, since it's fundamentally a different kind of database.</p>
 <h2 id="connecting-to-databases">Connecting to Databases<a class="headerlink" href="#connecting-to-databases" title="Permanent link">&para;</a></h2>
 <p>To use a database most libraries will require you explicitly make a call to <code>connect()</code> to the database, but where you do this is important. It can't be done before the bot is started because it will rely on the event loop to connect since the library you use should be async. Your first reaction might be to think that it should go in a handler for the <code>READY</code> event, but that's not the case. The <code>READY</code> event can be delivered multiple times by the Discord API, but we only wish to connect to the database once - when it's not already connected.</p>
 <p>Because of this it's preferable to subclass the Bot/Client class and override the <code>start()</code> method. The start method is an async function called right at the start of the bot's lifecycle, which makes it the ideal place to do initial async setup such as connecting to a database, retrieving data from an API, or starting background tasks.</p>
-<p>Depending on yout bot's setup your code will likely look different, but if we wanted to do this with asyncpg in Disnake it might look like this:</p>
+<p>Depending on your bot's setup your code will likely look different, but if we wanted to do this with asyncpg in Disnake it might look like this:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">asyncpg</span> <span class="kn">import</span> <span class="n">Pool</span><span class="p">,</span> <span class="n">connect</span>
 <span class="kn">from</span> <span class="nn">disnake</span> <span class="kn">import</span> <span class="n">Bot</span>
 
