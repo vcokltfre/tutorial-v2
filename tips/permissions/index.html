@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://tutorial-alpha.vcokltfre.dev/tips/admin/">
+        <link rel="canonical" href="https://tutorial-alpha.vcokltfre.dev/tips/permissions/">
       
       <link rel="icon" href="../../assets/tutorial.svg">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
-        <title>Bots with Admin - Discord Bot Tutorial</title>
+        <title>Bot Permission - Discord Bot Tutorial</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bots-with-admin" class="md-skip">
+        <a href="#bot-permission" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bots with Admin
+              Bot Permission
             
           </span>
         </div>
@@ -293,6 +293,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../mentions/" class="md-nav__link">
+        Allowed Mentions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -304,24 +318,48 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Bot Permission
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Bots with Admin
+        Bot Permission
       </a>
       
-    </li>
-  
+        
 
-            
-          
-            
-              
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
-    <li class="md-nav__item">
-      <a href="../mentions/" class="md-nav__link">
-        Allowed Mentions
-      </a>
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#administrator" class="md-nav__link">
+    Administrator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-you-should-do-permissions" class="md-nav__link">
+    How you should do permissions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -673,6 +711,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#administrator" class="md-nav__link">
+    Administrator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-you-should-do-permissions" class="md-nav__link">
+    How you should do permissions
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -683,12 +743,13 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/vcokltfre/tutorial-v2/edit/master/docs/tips/admin.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/vcokltfre/tutorial-v2/edit/master/docs/tips/permissions.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="bots-with-admin">Bots with Admin<a class="headerlink" href="#bots-with-admin" title="Permanent link">&para;</a></h1>
+<h1 id="bot-permission">Bot Permission<a class="headerlink" href="#bot-permission" title="Permanent link">&para;</a></h1>
+<h2 id="administrator">Administrator<a class="headerlink" href="#administrator" title="Permanent link">&para;</a></h2>
 <p>Giving bots the administrator permission in your server is almost always a bad and dangerous idea, for several key reasons:</p>
 <ol>
 <li>In the case of a token leak your bot has the permissions to do anything in all the servers it is in. This means it can ban all members, remove all of the channels, post illegal material, anything.</li>
@@ -696,6 +757,12 @@
 <li>In general a best practice for security is the principle of least privilege. This means that nothing should have more privileged than it needs to operate, and it is highly unlikely that your bot actually warrants the administrator permission to function correctly.</li>
 </ol>
 <p>A common argument in favour of using this permission is "if you're careful with your tokenb and make sure it never gets leaked it's fine." No. As mentioned in point 2 people make mistakes. You are the weakest link in the security chain, and you have the capability to break it.</p>
+<h2 id="how-you-should-do-permissions">How you should do permissions<a class="headerlink" href="#how-you-should-do-permissions" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Figure out which permissions your bot actually needs to run. It helps to track the permissions each command/feature needs as you implement them so you don't need to scour your whole code at a later date to find them.</li>
+<li>Note all of these permissions somewhere for future reference. Make sure to note which features need which permissions, this will mean users can see why the bot needs a specific permission, and makes it easier for them to only give the permissions for the features they need from the bot.</li>
+<li>Add checks to your commands that ensure a bot has permissions to perform a command before the command logic is invoked. This will mean you can give your users more informative error messages about why the command can't run preemptively, rather than replying on later exceptions when the command is actually run. This can prevent unnecessary failed API calls.</li>
+</ol>
 
               
             </article>
@@ -709,7 +776,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../credits/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Credits" rel="prev">
+        <a href="../mentions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Allowed Mentions" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -718,20 +785,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Credits
+              Allowed Mentions
             </div>
           </div>
         </a>
       
       
         
-        <a href="../mentions/" class="md-footer__link md-footer__link--next" aria-label="Next: Allowed Mentions" rel="next">
+        <a href="../storage/" class="md-footer__link md-footer__link--next" aria-label="Next: Storing Data" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Allowed Mentions
+              Storing Data
             </div>
           </div>
           <div class="md-footer__button md-icon">

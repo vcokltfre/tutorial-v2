@@ -295,8 +295,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../admin/" class="md-nav__link">
-        Bots with Admin
+      <a href="../mentions/" class="md-nav__link">
+        Allowed Mentions
       </a>
     </li>
   
@@ -309,8 +309,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../mentions/" class="md-nav__link">
-        Allowed Mentions
+      <a href="../permissions/" class="md-nav__link">
+        Bot Permission
       </a>
     </li>
   
@@ -394,6 +394,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-databases" class="md-nav__link">
+    Connecting to Databases
+  </a>
   
 </li>
       
@@ -793,6 +800,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#connecting-to-databases" class="md-nav__link">
+    Connecting to Databases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resources" class="md-nav__link">
     Resources
   </a>
@@ -839,6 +853,21 @@
 <h3 id="mongodb">MongoDB<a class="headerlink" href="#mongodb" title="Permanent link">&para;</a></h3>
 <p>MongoDB is a document store, not a relational database like MySQL or PostgreSQL, which means its usecases are slightly different. MongoDB is primarily for storing JSON-like objects but in a proper database so you don't need to handle file storage and other general shenanigans when storing data.</p>
 <p>To use MongoDB in your bot you'll want to use the <a href="https://pypi.org/project/motor/" rel="noopener" target="_blank">motor</a> client library. Motor also provides an easy interface for interacting with MongoDB, but in a very different way to the previous SQL databases mentioned, since it's fundamentally a different kind of database.</p>
+<h2 id="connecting-to-databases">Connecting to Databases<a class="headerlink" href="#connecting-to-databases" title="Permanent link">&para;</a></h2>
+<p>To use a database most libraries will require you explicitly make a call to <code>connect()</code> to the database, but where you do this is important. It can't be done before the bot is started because it will rely on the event loop to connect since the library you use should be async. Your first reaction might be to think that it should go in a handler for the <code>READY</code> event, but that's not the case. The <code>READY</code> event can be delivered multiple times by the Discord API, but we only wish to connect to the database once - when it's not already connected.</p>
+<p>Because of this it's preferable to subclass the Bot/Client class and override the <code>start()</code> method. The start method is an async function called right at the start of the bot's lifecycle, which makes it the ideal place to do initial async setup such as connecting to a database, retrieving data from an API, or starting background tasks.</p>
+<p>Depending on yout bot's setup your code will likely look different, but if we wanted to do this with asyncpg in Disnake it might look like this:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">asyncpg</span> <span class="kn">import</span> <span class="n">Pool</span><span class="p">,</span> <span class="n">connect</span>
+<span class="kn">from</span> <span class="nn">disnake</span> <span class="kn">import</span> <span class="n">Bot</span>
+
+<span class="k">class</span> <span class="nc">MyBot</span><span class="p">(</span><span class="n">Bot</span><span class="p">):</span>
+    <span class="n">pool</span><span class="p">:</span> <span class="n">Pool</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pool</span> <span class="o">=</span> <span class="k">await</span> <span class="n">connect</span><span class="p">(</span><span class="s2">&quot;postgres://user:password@localhost/database&quot;</span><span class="p">)</span>
+
+        <span class="k">await</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</code></pre></div>
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -872,6 +901,10 @@
 <td><a href="https://www.mysqltutorial.org/" rel="noopener" target="_blank">MySQL tutorial</a></td>
 <td>A tutorial to help you learn how to use MySQL and MariaDB</td>
 </tr>
+<tr>
+<td><a href="https://collerek.github.io/ormar/" rel="noopener" target="_blank">Ormar Docs</a></td>
+<td>Ormar documentation - an async ORM for PostgreSQL, MySQL, and SQLite</td>
+</tr>
 </tbody>
 </table>
 
@@ -887,7 +920,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../mentions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Allowed Mentions" rel="prev">
+        <a href="../permissions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Bot Permission" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -896,7 +929,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Allowed Mentions
+              Bot Permission
             </div>
           </div>
         </a>
