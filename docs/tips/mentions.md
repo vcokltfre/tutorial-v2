@@ -31,18 +31,18 @@ There're a couple of ways you can use allowed mentions in disnake and nextcord:
 
     The example above will disable all pings in messages the bot sends, but you can toggle these as you like. Try making your bot send mentions with these settings to see allowed mentions in action!
 
-    The next way of setting allowed mentions is when sending a message, or replying to one. Either way it uses the same keyword argument, so I'll just show sending a message normally, and you can adapt that to your own code. Again the first thing we need to do if we havent already is import discord.py so we can access the `AllowedMentions` class:
+    The next way of setting allowed mentions is when sending a message, or replying to one. Either way it uses the same keyword argument, so I'll just show sending a message normally, and you can adapt that to your own code. Again the first thing we need to do if we haven't already is import discord.py so we can access the `AllowedMentions` class:
 
     ```py
     from disnake import AllowedMentions
-    from disnake.ext.commands import InterationContext, slash_command
+    from disnake.ext.commands import InteractionContext, slash_command
     ```
 
     Now, I'll assume that we're in a cog, so I can create a command like this:
 
     ```py
         @slash_command(name="dontpingme", description="A command that doesn't ping anyone.", guild_ids=[...])
-        async def dont_ping_me(self, inter: InterationContext) -> None:
+        async def dont_ping_me(self, inter: InteractionContext) -> None:
             mentions = discord.AllowedMentions(
                 users=False,
             )
@@ -74,7 +74,7 @@ There're a couple of ways you can use allowed mentions in disnake and nextcord:
 
     The example above will disable all pings in messages the bot sends, but you can toggle these as you like. Try making your bot send mentions with these settings to see allowed mentions in action!
 
-    The next way of setting allowed mentions is when sending a message, or replying to one. Either way it uses the same keyword argument, so I'll just show sending a message normally, and you can adapt that to your own code. Again the first thing we need to do if we havent already is import discord.py so we can access the `AllowedMentions` class:
+    The next way of setting allowed mentions is when sending a message, or replying to one. Either way it uses the same keyword argument, so I'll just show sending a message normally, and you can adapt that to your own code. Again the first thing we need to do if we haven't already is import discord.py so we can access the `AllowedMentions` class:
 
     ```py
     from nextcord import AllowedMentions, Interaction, slash_command
@@ -84,7 +84,7 @@ There're a couple of ways you can use allowed mentions in disnake and nextcord:
 
     ```py
         @slash_command(name="dontpingme", description="A command that doesn't ping anyone.", guild_ids=[...])
-        async def dont_ping_me(self, inter: Interation) -> None:
+        async def dont_ping_me(self, inter: Interaction) -> None:
             mentions = discord.AllowedMentions(
                 users=False,
             )

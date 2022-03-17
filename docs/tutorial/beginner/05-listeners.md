@@ -43,7 +43,7 @@ Just like previous parts we'll want a basic bot to be set up. In this example we
 
     !!! Note
 
-        We are importing `Message` here so that we can typehint the `message` parameter of the `on_message` listener later on.
+        We are importing `Message` here so that we can type hint the `message` parameter of the `on_message` listener later on.
 
 Next we'll create a listener that will delete any message that contains the word "badword" in it, again this is inserted just above the `bot.run()` call:
 

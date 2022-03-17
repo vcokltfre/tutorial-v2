@@ -14,11 +14,11 @@ That's pretty much it for the gateway at this level. There is a lot more detail 
 
 ## 2: The API
 
-The API is how out bots talk back to Discord. We're receiving events from the gateway which deliver information to our bot, but when we want to resond to one of these events, for example automatically deleting a message with banned words in it, we need to make a request to Discord's REST API telling it to delete that message. If you've ever sent a message on Discord, added a reaction, renamed a channel, or done just about any other action in the client, you've interacted with the API before, you just haven't seen it.
+The API is how out bots talk back to Discord. We're receiving events from the gateway which deliver information to our bot, but when we want to respond to one of these events, for example automatically deleting a message with banned words in it, we need to make a request to Discord's REST API telling it to delete that message. If you've ever sent a message on Discord, added a reaction, renamed a channel, or done just about any other action in the client, you've interacted with the API before, you just haven't seen it.
 
 Bots have most of the same endpoints available as regular users, bar a few like adding friends, blocking people, and joining guilds. They do, however, have certain features exclusive to bots, like the ability to lock emojis to members with a certain role.
 
-As with the gateway, API calls are done behind the scenes and you don't need to manually interact with the API. This is useful as it abstracts away the difficult points of passing headers and handling ratelimits.
+As with the gateway, API calls are done behind the scenes and you don't need to manually interact with the API. This is useful as it abstracts away the difficult points of passing headers and handling rate limits.
 
 ## 3: Terminology
 

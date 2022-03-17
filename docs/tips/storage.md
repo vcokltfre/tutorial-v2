@@ -5,7 +5,7 @@ As your bot grows in features you'll probably want to store persistent data, and
 !!! warning
     If you have one takeaway from this, let it be that JSON is **not** a database, and does not work as one, nor does CSV, or plain text files. JSON works well as a data transfer format, or for config files, but is not made for storing changeable persistent data.
 
-    In addition to this, spreadsheets are not databases either. Neither Excel nor Google Sheets are acceptable replacements for actual databases. If I hear that you, the reader, is using a spreadhseet as a database I will feel very bad please do not do this!
+    In addition to this, spreadsheets are not databases either. Neither Excel nor Google Sheets are acceptable replacements for actual databases. If I hear that you, the reader, is using a spreadsheet as a database I will feel very bad please do not do this!
 
 ## Databases You Can Use
 
@@ -20,7 +20,7 @@ To use postgres in your bot you'll want to use a client library such as [asyncpg
 
 ### MySQL / MariaDB
 
-MySQL or it's younger sibling MariaDB are also popular SQL databases which are also extremely commonly used. For most bots there will be no noticable difference between MySQL-based and Postgres, so it's really up to personal preference
+MySQL or it's younger sibling MariaDB are also popular SQL databases which are also extremely commonly used. For most bots there will be no noticeable difference between MySQL-based and Postgres, so it's really up to personal preference
 
 To use MySQL or MariaDB in your bot you'll want the [aiomysql](https://pypi.org/project/aiomysql/) client library, which also provides an easy interface for interacting with MySQL.
 
@@ -30,7 +30,7 @@ SQLite is a simple, fast, local database. It's a SQL database and can be easily 
 
 ### MongoDB
 
-MongoDB is a document store, not a relational database like MySQL or PostgreSQL, which means its usecases are slightly different. MongoDB is primarily for storing JSON-like objects but in a proper database so you don't need to handle file storage and other general shenanigans when storing data.
+MongoDB is a document store, not a relational database like MySQL or PostgreSQL, which means its use cases are slightly different. MongoDB is primarily for storing JSON-like objects but in a proper database so you don't need to handle file storage and other general shenanigans when storing data.
 
 To use MongoDB in your bot you'll want to use the [motor](https://pypi.org/project/motor/) client library. Motor also provides an easy interface for interacting with MongoDB, but in a very different way to the previous SQL databases mentioned, since it's fundamentally a different kind of database.
 
@@ -40,7 +40,7 @@ To use a database most libraries will require you explicitly make a call to `con
 
 Because of this it's preferable to subclass the Bot/Client class and override the `start()` method. The start method is an async function called right at the start of the bot's lifecycle, which makes it the ideal place to do initial async setup such as connecting to a database, retrieving data from an API, or starting background tasks.
 
-Depending on yout bot's setup your code will likely look different, but if we wanted to do this with asyncpg in Disnake it might look like this:
+Depending on your bot's setup your code will likely look different, but if we wanted to do this with asyncpg in Disnake it might look like this:
 
 ```py
 from asyncpg import Pool, connect

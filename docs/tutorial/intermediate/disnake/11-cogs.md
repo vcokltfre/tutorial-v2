@@ -6,7 +6,7 @@ Cogs are an important part of Disnake which allow you to organise your events an
 
     Cogs require a basic understanding of OOP/classes in Python. If you're not familiar with this, check out the first video in [Corey Schafer's OOP Tutorial](https://www.youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc).
 
-Now that we're using cogs we're going to abandon most of the code we have from previous parts, since it needs to change significantly to be used with cogs, and some of the functionality we've impelemnted so far isn't very useful anyway.
+Now that we're using cogs we're going to abandon most of the code we have from previous parts, since it needs to change significantly to be used with cogs, and some of the functionality we've implemented so far isn't very useful anyway.
 
 !!! Note
 

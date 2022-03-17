@@ -1,6 +1,6 @@
 # Intermediate - Home
 
-This section of the tutorial is for intermediate users of Nextcord and Disnake. It aims to cover more advanced features which are less common in smaller application, but which may be rewuired for larger projects.
+This section of the tutorial is for intermediate users of Nextcord and Disnake. It aims to cover more advanced features which are less common in smaller application, but which may be required for larger projects.
 
 !!! Note
 
