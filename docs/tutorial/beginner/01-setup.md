@@ -50,7 +50,7 @@ Now you’ll want to choose permissions for your bot based on what you want it t
 
 !!! Warning
 
-    There are almost no circumstances under which your bot will ever need the `Administrator` permission. If you do not absolutely need it, you should not have it, as bots with administrator can destroy servers in seconds by deleting channels, mass-banning members, and a multitude of other unpleasant actions.
+    There are almost no circumstances under which your bot will ever need the `Administrator` permission. If you do not absolutely need it, you should not have it, as bots with administrator can destroy servers in seconds by deleting channels, mass-banning members, and a multitude of other unpleasant actions. For more info about this please read [this tip about bot permissions](../../tips/permissions.md).
 
 In the end your permissions should look like this:
 
