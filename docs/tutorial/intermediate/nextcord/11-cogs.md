@@ -64,7 +64,7 @@ We still have a final piece of code we need to add to the cog's file in order fo
     ```py
     # This goes at the bottom of the file.
 
-    def setup(self, bot: Bot) -> None:
+    def setup(bot: Bot) -> None:
         bot.add_cog(Ping(bot))
     ```
 
