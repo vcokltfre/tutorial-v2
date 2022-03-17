@@ -4,13 +4,13 @@ This is a tutorial to guide you through the process of creating your very own fu
 
 This tutorial aims to cover 2 main libraries at the same time, Nextcord and Disnake. Multiple code tabs will be used to show each library's implementation of the feature being explained, looking like this:
 
-=== "nextcord.py"
+=== "nextcord_example.py"
 
     ```py
     import nextcord
     ```
 
-=== "disnake.py"
+=== "disnake_example.py"
 
     ```py
     import disnake
