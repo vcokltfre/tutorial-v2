@@ -12,7 +12,7 @@ Now that we're using cogs we're going to abandon most of the code we have from p
 
     In this part I'll refer to cogs and extensions, and the difference between both is important. A cog is a single class that inherits from `Cog`, which encapsulates commands and events. An extension is a collection of cogs which has a setup function and can be loaded via the bot's `load_extension` method, although you will often find extensions with just one cog.
 
-As with the previous parts we need to create a bot object, we'll do this in a file named `main.py`:
+In the previous parts with Nextcord we used the `Client` class since this supports slash commands natively, but as of right now the regular client does not support using Cogs, and as a result we will have to switch to using `nextcord.ext.commands.Bot`, which is essentially the same as `nextcord.Client` but supports loading extensions and cogs. Let's create a file named `main.py` and add in the base code:
 
 === "main.py"
 
