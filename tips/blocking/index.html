@@ -10,21 +10,21 @@
       
       
       
-        <link rel="canonical" href="https://tutorial-alpha.vcokltfre.dev/tutorial/beginner/01-setup/">
+        <link rel="canonical" href="https://tutorial-alpha.vcokltfre.dev/tips/blocking/">
       
-      <link rel="icon" href="../../../assets/tutorial.svg">
+      <link rel="icon" href="../../assets/tutorial.svg">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
-        <title>Creating a Bot User - Discord Bot Tutorial</title>
+        <title>Blocking vs Non-Blocking IO - Discord Bot Tutorial</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -38,15 +38,15 @@
       
     
     
-      <link rel="stylesheet" href="../../../styles/light.css">
+      <link rel="stylesheet" href="../../styles/light.css">
     
-      <link rel="stylesheet" href="../../../styles/dark.css">
+      <link rel="stylesheet" href="../../styles/dark.css">
     
-      <link rel="stylesheet" href="../../../styles/common.css">
+      <link rel="stylesheet" href="../../styles/common.css">
     
-      <link rel="stylesheet" href="../../../styles/discord.css">
+      <link rel="stylesheet" href="../../styles/discord.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creating-a-bot-user" class="md-skip">
+        <a href="#blocking-vs-non-blocking-io" class="md-skip">
           Skip to content
         </a>
       
@@ -88,9 +88,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Discord Bot Tutorial" class="md-header__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
+    <a href="../.." title="Discord Bot Tutorial" class="md-header__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
       
-  <img src="../../../assets/tutorial.svg" alt="logo">
+  <img src="../../assets/tutorial.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Creating a Bot User
+              Blocking vs Non-Blocking IO
             
           </span>
         </div>
@@ -207,9 +207,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Discord Bot Tutorial" class="md-nav__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
+    <a href="../.." title="Discord Bot Tutorial" class="md-nav__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
       
-  <img src="../../../assets/tutorial.svg" alt="logo">
+  <img src="../../assets/tutorial.svg" alt="logo">
 
     </a>
     Discord Bot Tutorial
@@ -237,7 +237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -252,7 +252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../credits/" class="md-nav__link">
+      <a href="../../credits/" class="md-nav__link">
         Credits
       </a>
     </li>
@@ -265,12 +265,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -291,11 +293,106 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../tips/blocking/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Blocking vs Non-Blocking IO
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Blocking vs Non-Blocking IO
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-concurrency" class="md-nav__link">
+    What is concurrency?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-blocking" class="md-nav__link">
+    What is blocking?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asyncio" class="md-nav__link">
+    asyncio
+  </a>
+  
+    <nav class="md-nav" aria-label="asyncio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-basics" class="md-nav__link">
+    The basics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+    <nav class="md-nav" aria-label="References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    ¹
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -307,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tips/mentions/" class="md-nav__link">
+      <a href="../mentions/" class="md-nav__link">
         Allowed Mentions
       </a>
     </li>
@@ -321,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tips/permissions/" class="md-nav__link">
+      <a href="../permissions/" class="md-nav__link">
         Bot Permissions
       </a>
     </li>
@@ -335,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tips/storage/" class="md-nav__link">
+      <a href="../storage/" class="md-nav__link">
         Storing Data
       </a>
     </li>
@@ -349,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tips/tokens/" class="md-nav__link">
+      <a href="../tokens/" class="md-nav__link">
         Storing Tokens and Secrets
       </a>
     </li>
@@ -369,14 +466,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -399,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../tutorial/" class="md-nav__link">
         Tutorial - Home
       </a>
     </li>
@@ -411,14 +506,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
       
       
       
@@ -439,21 +532,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/01-setup/" class="md-nav__link">
         Creating a Bot User
       </a>
-      
     </li>
   
 
@@ -465,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-overview/" class="md-nav__link">
+      <a href="../../tutorial/beginner/02-overview/" class="md-nav__link">
         An Overview of Discord
       </a>
     </li>
@@ -479,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-hello/" class="md-nav__link">
+      <a href="../../tutorial/beginner/03-hello/" class="md-nav__link">
         Hello, world
       </a>
     </li>
@@ -493,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-pong/" class="md-nav__link">
+      <a href="../../tutorial/beginner/04-pong/" class="md-nav__link">
         A Ping Command
       </a>
     </li>
@@ -507,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-listeners/" class="md-nav__link">
+      <a href="../../tutorial/beginner/05-listeners/" class="md-nav__link">
         Event Listeners
       </a>
     </li>
@@ -554,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/" class="md-nav__link">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
         Intermediate - Home
       </a>
     </li>
@@ -594,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/disnake/11-cogs/" class="md-nav__link">
+      <a href="../../tutorial/intermediate/disnake/11-cogs/" class="md-nav__link">
         Cogs
       </a>
     </li>
@@ -641,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/nextcord/11-cogs/" class="md-nav__link">
+      <a href="../../tutorial/intermediate/nextcord/11-cogs/" class="md-nav__link">
         Cogs
       </a>
     </li>
@@ -689,6 +772,75 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-concurrency" class="md-nav__link">
+    What is concurrency?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-blocking" class="md-nav__link">
+    What is blocking?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asyncio" class="md-nav__link">
+    asyncio
+  </a>
+  
+    <nav class="md-nav" aria-label="asyncio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-basics" class="md-nav__link">
+    The basics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information" class="md-nav__link">
+    More information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+    <nav class="md-nav" aria-label="References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    ¹
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -699,55 +851,54 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/vcokltfre/tutorial-v2/edit/master/docs/tutorial/beginner/01-setup.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/vcokltfre/tutorial-v2/edit/master/docs/tips/blocking.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="creating-a-bot-user">Creating a Bot User<a class="headerlink" href="#creating-a-bot-user" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>To create a bot application your Discord account must have a verified email address. It is also recommended that you enable 2-factor-authentication to secure your account.</p>
-</div>
-<p>The first step in creating a bot is to head over to the <a href="https://discordapp.com/developers/applications/me" rel="noopener" target="_blank">Discord Developer Portal</a> where you'll be asked to log in to your Discord account if you're not already signed in. Once you've logged in you'll see a screen like this:</p>
-<p><img alt="Discord Developer Portal" class="d-img" src="/assets/img/dev_portal_1.png" /></p>
-<p>You can now click the shiny blue <code>New Application</code> button in the top hand corner to get started creating a new application. After you click it you should see a box like this pop up:</p>
-<p><img alt="New Application" class="d-img" src="/assets/img/dev_portal_2.png" /></p>
-<p>Enter a suitable name for your application, and make sure that it follow Discord's Terms of Service. This applies to the entire tutorial too - you should not be using this tutorial for purposes that violate Discord's Terms of Service, Community Guidelines, or Developer Terms. You can read the Terms of Service <a href="https://dis.gd/terms" rel="noopener" target="_blank">here</a>, and the Developer Terms <a href="https://discord.com/developers/docs/legal" rel="noopener" target="_blank">here</a>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>As a rough overview here are some things you should know about the ToS:</p>
-<ul>
-<li>Don't abuse the API.</li>
-<li>Don't harass users.</li>
-<li>So don't randomly DM or spam them.</li>
-<li>Don't spam Discord.</li>
-<li>Generally actions performed by a bot should be caused by some user action like sending a message or adding a reaction.</li>
-<li>Don't post NSFW content in channels not marked as NSFW.</li>
-<li>This may seem obvious but a lot of bots allow NSFW content to be posted outside of NSFW channels. This is not allowed.</li>
-</ul>
-</div>
-<p>For the purposes of this tutorial we'll be using the name <code>WumpusBot</code>, and this will be referred to in other places in the tutorial, for example screenshots of commands.</p>
-<p>After creating an application you'll see a screen like this:</p>
-<p><img alt="General Information" class="d-img" src="/assets/img/dev_portal_3.png" /></p>
-<p>There's quite a lot of information on this screen, so for now we'll ignore most of it since it's out of scope for the beginning of this tutorial. Click on the <code>Bot</code> tab on the left hand side (marked by a jigsaw piece) to switch to the bot page. On this page you'll see a button that says <code>Add Bot.</code> Clicking this will prompt you asking whether you're sure you want to create a new bot (you can't delete bots since they're too cool to destroy), click <code>Yes, do it!</code> and now you have your very own bot.</p>
-<p>After creating a bot your screen will change to look like this:</p>
-<p><img alt="Bot" class="d-img" src="/assets/img/dev_portal_4.png" /></p>
-<p>Below the username box you'll see a button that says <code>Copy</code> which copies your bot's authentication token to your clipboard. You'll want to keep this token safe and on hand so your bot can connect to Discord later on in the tutorial.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Make sure never to post your token anywhere publicly, else people will be able to log in as your bot, and perform actions against the Discord API as your bot. If you believe that your bot’s token was leaked, be sure to go to it’s developer portal page and click the Regenerate button to regenerate the token so that nobody can use the old one.</p>
-</div>
-<p>Finally for this part, you need to add your bot to your server. To do this you first require the Manage Server permission in whatever server you plan on adding it to. You’ll want to head over to the OAuth2 tab on the left of the developer portal (marked by a wrench), where you’ll be able to choose the scopes you want for your bot. For now, just select the bot scope, as it’s all that will be needed for this tutorial - at least at the beginning.</p>
-<p>Now you’ll want to choose permissions for your bot based on what you want it to do. For WumpusBot, I’ll start by giving it <code>Send Messages</code>, <code>Embed Links</code>, <code>Attach Files</code>, <code>Manage Messages</code>, and <code>Add Reactions</code>, although we may need more permissions later, but that will be handled within Discord itself.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>There are almost no circumstances under which your bot will ever need the <code>Administrator</code> permission. If you do not absolutely need it, you should not have it, as bots with administrator can destroy servers in seconds by deleting channels, mass-banning members, and a multitude of other unpleasant actions. For more info about this please read <a href="../../../tips/permissions/">this tip about bot permissions</a>.</p>
-</div>
-<p>In the end your permissions should look like this:</p>
-<p><img alt="Bot Permissions" class="d-img" src="/assets/img/dev_portal_5.png" /></p>
-<p>Now you can copy the URL in the box above, and paste it into your browser, then follow the steps to add the bot to your server of choice. As of late 2021 it is also possible to click invite links within Discord itself to add a bot to your server too.</p>
-<p>That's it for the first part of the tutorial, you've created your very own bot user on Discord. Now you just have to do the fun bit - adding features - after all, what's a bot without features?</p>
+<h1 id="blocking-vs-non-blocking-io">Blocking vs Non-Blocking IO<a class="headerlink" href="#blocking-vs-non-blocking-io" title="Permanent link">&para;</a></h1>
+<p>Blocking and non-blocking are two terms you'll see pop up fairly frequently when developing Discord bots, since Discord is an inherently asynchronous platform. When creating a bot in Python you'll almost certainly be using async libraries such as discord.py, nextcord, disnake, and Hikari. These libraries use another library internally called <code>asyncio</code>. The <code>asyncio</code> library means, at a high level, that you can do multiple things at the same time in your code.</p>
+<h2 id="what-is-concurrency">What is concurrency?<a class="headerlink" href="#what-is-concurrency" title="Permanent link">&para;</a></h2>
+<p>Concurrent code is code which runs at the same time as other code within the same process. There are a couple of methods to achieve concurrency in Python. One method is to use an operating system construct called threads (via the <code>threading</code> library in Python). Threads are OS managed concurrency, essentially the OS decides when code runs, which can cause confusion and data to be modified when it's unexpected, so is now often avoided.</p>
+<p>The second method of creating concurrent code is by using <code>async/await</code>, which is now often built into programming languages. For example, Python, JavaScript, and Rust all come with features which allow for concurrently executing code via <code>async/await</code><a href="#1">¹</a>. This is known as cooperative multitasking/concurrency because the programmer decides when to hand control back to the event loop, which is in charge of scheduling the execution of tasks. This is the type of concurrency we will focus on in this article.</p>
+<h2 id="what-is-blocking">What is blocking?<a class="headerlink" href="#what-is-blocking" title="Permanent link">&para;</a></h2>
+<p>Blocking code is code that runs synchronously and thus <em>blocks</em> the event loop from being able to run multiple tasks in parallel. This has the effect of stopping the execution of all functions that are not the synchronous function, until the synchronous function has finished executing. This can be a big problem if you have lots of slow synchronous functions being called, as they will often block the event loop and prevent normal operation of the async tasks within it.</p>
+<p>In Discord bots this can lead to large slowdowns, or in the case of interactions they may fail entirely due to the interaction token being valid only for 3 seconds. In this case there is no way for the library to respond to that interaction, be it a slash command, button press, etc. As a result the user will be shown a message saying the interaction has failed, and you'll likely receive an error in the console saying the interaction couldn't be responded to. For this reason it's very important that any long-running operations or operations that do input/output are non-blocking functions.</p>
+<h2 id="asyncio">asyncio<a class="headerlink" href="#asyncio" title="Permanent link">&para;</a></h2>
+<p>As mentioned above the way we do cooperative concurrency in Python is via the <code>asyncio</code> library, which is a standard library module in all modern Python versions, including all Python versions supported by libraries like discord.py.</p>
+<h3 id="the-basics">The basics<a class="headerlink" href="#the-basics" title="Permanent link">&para;</a></h3>
+<p>In order to use <code>asyncio</code> at a very basic level there are a few things you absolutely must know about it. Firstly you need to understand what a <code>coroutine</code> is. A coroutine is an important construct in <code>asyncio</code>, and is the result of calling an async function.</p>
+<p>Let's say you define a function like the following:</p>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">pass</span>
+</code></pre></div>
+<p>This is an async function, as denoted by the keyword <code>async</code> ahead of <code>def</code>. When this function is called regularly it returns a coroutine object. This object can then be awaited and the event loop will handle ensuring that it gets completed:</p>
+<div class="highlight"><pre><span></span><code><span class="n">coro</span> <span class="o">=</span> <span class="n">main</span><span class="p">()</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">coro</span><span class="p">()</span>
+</code></pre></div>
+<p>In this case the result will be <code>None</code>, since the function returns nothing, but the awaited coroutine will return whatever the function returns, the difference is that you must await it to get the result, which allows the event loop to schedule its execution among other coroutines operating effectively in parallel, giving the image of everything running at the same time.</p>
+<p>It's important to understand that async functions return coroutines, but in normal use, you'll simply await the call to an async function for clarity, such as this:</p>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<p>To run an async function there are two ways you need to know for now:</p>
+<ol>
+<li>Awaiting it from within another async function, as shown above.</li>
+<li>Running it using <code>asyncio</code>'s <code>run</code> method, which takes in a coroutine, as shown below:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">asyncio</span> <span class="kn">import</span> <span class="n">run</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The async function has run!&quot;</span><span class="p">)</span>
+
+<span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</code></pre></div>
+<p>Running this code should yield an output of <code>The async function has run!</code> into your console.</p>
+<h3 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h3>
+<p>For a more in depth tutorial about asyncio I'd recommend reading <a href="https://realpython.com/async-io-python/" rel="noopener" target="_blank">this Real Python article</a>, which explains how more of it works in much more depth.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h3 id="1">¹<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>Golang also has concurrency built in as a first-class language feature called goroutines. Goroutines are lightweight and can be used for massive concurrency. If you're interested in learning more I'd recommend reading <a href="https://www.geeksforgeeks.org/goroutines-concurrency-in-golang/" rel="noopener" target="_blank">this Geeks for Geeks article</a>.</p>
 
               
             </article>
@@ -761,7 +912,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tutorial - Home" rel="prev">
+        <a href="../../credits/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Credits" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -770,20 +921,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Tutorial - Home
+              Credits
             </div>
           </div>
         </a>
       
       
         
-        <a href="../02-overview/" class="md-footer__link md-footer__link--next" aria-label="Next: An Overview of Discord" rel="next">
+        <a href="../mentions/" class="md-footer__link md-footer__link--next" aria-label="Next: Allowed Mentions" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              An Overview of Discord
+              Allowed Mentions
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -839,10 +990,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
       
     
   </body>
