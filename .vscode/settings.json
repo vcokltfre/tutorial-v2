@@ -1,6 +1,7 @@
 {
     "cSpell.ignoreWords": [
         "Anand",
+        "Hikari",
         "Ormar",
         "Pastebin",
         "Rapptz",
@@ -10,11 +11,14 @@
         "Wumpus",
         "aiomysql",
         "aiosqlite",
+        "asyncio",
         "asyncpg",
         "badword",
+        "coro",
         "disnake",
         "dont",
         "dontpingme",
+        "goroutines",
         "heartbeating",
         "kwargs",
         "nextcord",
