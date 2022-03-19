@@ -20,6 +20,7 @@ mkdocs = "^1.2.3"
 [tool.taskipy.tasks]
 build = "mkdocs build"
 serve = "mkdocs serve --dev-addr=127.0.0.1:5000"
+tsc = "tsc docs/js/discord.ts --outdir docs/js --watch --target es6"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
