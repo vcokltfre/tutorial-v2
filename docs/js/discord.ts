@@ -16,35 +16,6 @@ type Message = {
   content: string;
 };
 
-/*
-<div class="d-msg">
-
-<div class="d-msg-slash">
-    <div class="d-msg-slash-arr"></div>
-    <div class="d-msg-slash-author">
-        <img src="https://cdn.discordapp.com/avatars/297045071457681409/838a52d60f325b796a7b3a4927bac943.png?size=1024">
-        vcokltfre
-        <span class="d-msg-slash-used">used</span>
-        <span class="d-msg-slash-command">/hello</span>
-    </div>
-</div>
-
-<div class="d-msg-body">
-    <div class="d-msg-author-pfp">
-        <img src="https://cdn.discordapp.com/avatars/689160870143590621/74ddebbc9161ddcee9f4f4f3e25e22fa.png">
-    </div>
-    <div class="d-msg-main">
-        <div class="d-msg-author-name">
-            WumpusBot<span class="d-msg-author-bot">BOT</span>
-        </div>
-        <div class="d-msg-content">
-            Hello!
-        </div>
-    </div>
-</div>
-</div>
-*/
-
 function renderSlash(message: Message): string {
   if (!message.slash) {
     return "";
@@ -58,7 +29,7 @@ function renderSlash(message: Message): string {
     message.slash.author.name
   }</span>
         <span class="d-msg-slash-used">used</span>
-        <span class="d-msg-slash-command">${message.slash.name}</span>
+        <span class="d-msg-slash-command">/${message.slash.name}</span>
     </div>
   </div>`;
 }
