@@ -1,0 +1,17 @@
+{
+  "author": {
+    "name": "WumpusBot",
+    "avatar": "https://cdn.discordapp.com/avatars/689160870143590621/74ddebbc9161ddcee9f4f4f3e25e22fa.png",
+    "bot": true
+  },
+  "content": "Hello!",
+  "slash": {
+    "author": {
+      "name": "vcokltfre",
+      "avatar": "https://cdn.discordapp.com/avatars/297045071457681409/838a52d60f325b796a7b3a4927bac943.png?size=1024",
+      "bot": false,
+      "colour": "87CEEB"
+    },
+    "name": "hello"
+  }
+}
