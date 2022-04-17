@@ -16,4 +16,4 @@ JSON is **not** suitable as a database. Do not use it to store persistent data, 
 
 4. JSON is primarily a KV (key-value) format, for example `{"a":"b"}` where `a` is the key and `b` is the value, but what if you want to search not by that key but by a sub-key? Well, instead of being able to quickly use `var[key]`, which in a Python dictionary has a constant return time (for more info look up hash tables), you now have to iterate through every object in the dictionary and compare to find what you're looking for. Most relational database systems, like MySQL, MariaDB, and PostgreSQL have ways of indexing secondary fields apart from the primary key so that you can easily search by multiple attributes.
 
-For more info and resources about storing persistent data, please see <https://vcokltfre.dev/tips/storage/>
+For more info and resources about storing persistent data, please see [this tip part](/tips/storage).
