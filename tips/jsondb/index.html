@@ -10,19 +10,21 @@
       
       
       
-      <link rel="icon" href="/assets/tutorial.svg">
+        <link rel="canonical" href="https://tutorial-alpha.vcokltfre.dev/tips/jsondb/">
+      
+      <link rel="icon" href="../../assets/tutorial.svg">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
-        <title>Discord Bot Tutorial</title>
+        <title>JSON as a Database - Discord Bot Tutorial</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -36,15 +38,15 @@
       
     
     
-      <link rel="stylesheet" href="/styles/light.css">
+      <link rel="stylesheet" href="../../styles/light.css">
     
-      <link rel="stylesheet" href="/styles/dark.css">
+      <link rel="stylesheet" href="../../styles/dark.css">
     
-      <link rel="stylesheet" href="/styles/common.css">
+      <link rel="stylesheet" href="../../styles/common.css">
     
-      <link rel="stylesheet" href="/styles/discord.css">
+      <link rel="stylesheet" href="../../styles/discord.css">
     
-    <script>__md_scope=new URL("/",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#json-as-a-database" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,9 +88,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Discord Bot Tutorial" class="md-header__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
+    <a href="../.." title="Discord Bot Tutorial" class="md-header__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
       
-  <img src="/assets/tutorial.svg" alt="logo">
+  <img src="../../assets/tutorial.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -99,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              JSON as a Database
             
           </span>
         </div>
@@ -200,9 +207,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Discord Bot Tutorial" class="md-nav__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
+    <a href="../.." title="Discord Bot Tutorial" class="md-nav__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
       
-  <img src="/assets/tutorial.svg" alt="logo">
+  <img src="../../assets/tutorial.svg" alt="logo">
 
     </a>
     Discord Bot Tutorial
@@ -230,7 +237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -245,7 +252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/credits/" class="md-nav__link">
+      <a href="../../credits/" class="md-nav__link">
         Credits
       </a>
     </li>
@@ -258,12 +265,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -286,7 +295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tips/blocking/" class="md-nav__link">
+      <a href="../blocking/" class="md-nav__link">
         Blocking vs Non-Blocking IO
       </a>
     </li>
@@ -298,11 +307,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/tips/jsondb/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          JSON as a Database
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         JSON as a Database
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    TL;DR
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -314,7 +364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tips/mentions/" class="md-nav__link">
+      <a href="../mentions/" class="md-nav__link">
         Allowed Mentions
       </a>
     </li>
@@ -328,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tips/permissions/" class="md-nav__link">
+      <a href="../permissions/" class="md-nav__link">
         Bot Permissions
       </a>
     </li>
@@ -342,7 +392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tips/storage/" class="md-nav__link">
+      <a href="../storage/" class="md-nav__link">
         Storing Data
       </a>
     </li>
@@ -356,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tips/tokens/" class="md-nav__link">
+      <a href="../tokens/" class="md-nav__link">
         Storing Tokens and Secrets
       </a>
     </li>
@@ -404,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial/" class="md-nav__link">
+      <a href="../../tutorial/" class="md-nav__link">
         Tutorial - Home
       </a>
     </li>
@@ -444,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial/beginner/01-setup/" class="md-nav__link">
+      <a href="../../tutorial/beginner/01-setup/" class="md-nav__link">
         Creating a Bot User
       </a>
     </li>
@@ -458,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial/beginner/02-overview/" class="md-nav__link">
+      <a href="../../tutorial/beginner/02-overview/" class="md-nav__link">
         An Overview of Discord
       </a>
     </li>
@@ -472,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial/beginner/03-hello/" class="md-nav__link">
+      <a href="../../tutorial/beginner/03-hello/" class="md-nav__link">
         Hello, world
       </a>
     </li>
@@ -486,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial/beginner/04-pong/" class="md-nav__link">
+      <a href="../../tutorial/beginner/04-pong/" class="md-nav__link">
         A Ping Command
       </a>
     </li>
@@ -500,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial/beginner/05-listeners/" class="md-nav__link">
+      <a href="../../tutorial/beginner/05-listeners/" class="md-nav__link">
         Event Listeners
       </a>
     </li>
@@ -547,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial/intermediate/" class="md-nav__link">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
         Intermediate - Home
       </a>
     </li>
@@ -587,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial/intermediate/disnake/11-cogs/" class="md-nav__link">
+      <a href="../../tutorial/intermediate/disnake/11-cogs/" class="md-nav__link">
         Cogs
       </a>
     </li>
@@ -634,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorial/intermediate/nextcord/11-cogs/" class="md-nav__link">
+      <a href="../../tutorial/intermediate/nextcord/11-cogs/" class="md-nav__link">
         Cogs
       </a>
     </li>
@@ -669,12 +719,73 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    TL;DR
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+<a href="https://github.com/vcokltfre/tutorial-v2/edit/master/docs/tips/jsondb.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
 
+
+<h1 id="json-as-a-database">JSON as a Database<a class="headerlink" href="#json-as-a-database" title="Permanent link">&para;</a></h1>
+<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h2>
+<p>JSON is <strong>not</strong> suitable as a database. Do not use it to store persistent data, instead take a read of <a href="/tips/storage">this tip part</a>.</p>
+<ol>
+<li>
+<p>JSON, quite simply, is not a database. It's not designed to be a data storage format, rather a way of transmitting data over a network. It's also often used as a way of doing configuration files for programs.</p>
+</li>
+<li>
+<p>There is no redundancy built in to JSON. JSON is just a format, and Python has libraries for it like json and ujson that let you load and dump it, sometimes to files, but that's all it does, write data to a file. There is no sort of DBMS (Database Management System), which means no sort of sophistication in how the data is stored, or built in ways to keep it safe and backed up, there's no built in encryption either - bear in mind in larger applications encryption may be necessary for GDPR/relevant data protection regulations compliance.</p>
+</li>
+<li>
+<p>JSON, unlike relational databases, has no way to store relational data, which is a very commonly needed way of storing data. Relational data, as the name may suggest, is data that relates to other data. For example if you have a table of users and a table of servers, the server table will probably have an owner field, where you'd reference a user from the users table.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This point is only relevant for relational data, but since a lot of data stored by bots is relational in nature this is worth including.</p>
+</div>
+</li>
+<li>
+<p>JSON is primarily a KV (key-value) format, for example <code>{"a":"b"}</code> where <code>a</code> is the key and <code>b</code> is the value, but what if you want to search not by that key but by a sub-key? Well, instead of being able to quickly use <code>var[key]</code>, which in a Python dictionary has a constant return time (for more info look up hash tables), you now have to iterate through every object in the dictionary and compare to find what you're looking for. Most relational database systems, like MySQL, MariaDB, and PostgreSQL have ways of indexing secondary fields apart from the primary key so that you can easily search by multiple attributes.</p>
+</li>
+</ol>
+<p>For more info and resources about storing persistent data, please see <a href="https://vcokltfre.dev/tips/storage/" rel="noopener" target="_blank">https://vcokltfre.dev/tips/storage/</a></p>
+
+              
             </article>
           </div>
         </div>
@@ -682,6 +793,41 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../blocking/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Blocking vs Non-Blocking IO" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Blocking vs Non-Blocking IO
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../mentions/" class="md-footer__link md-footer__link--next" aria-label="Next: Allowed Mentions" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Allowed Mentions
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -729,12 +875,12 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "/assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="/assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
       
-        <script src="/js/discord.js"></script>
+        <script src="../../js/discord.js"></script>
       
     
   </body>
