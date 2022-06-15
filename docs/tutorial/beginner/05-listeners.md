@@ -19,13 +19,13 @@ Just like previous parts we'll want a basic bot to be set up. In this example we
     async def hello(inter: nextcord.Interaction) -> None:
         await inter.response.send_message("Hello!")
 
-    bot.run("YOUR_BOT_TOKEN")
+    client.run("YOUR_BOT_TOKEN")
     ```
 
 === "Disnake"
 
     ```py
-    from disnake import CommandInteraction, Message
+    fron disnake import CommandInteraction, Message
     from disnake.ext.commands import Bot
 
     bot = Bot()
