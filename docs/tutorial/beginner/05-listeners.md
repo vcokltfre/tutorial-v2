@@ -25,7 +25,7 @@ Just like previous parts we'll want a basic bot to be set up. In this example we
 === "Disnake"
 
     ```py
-    fron disnake import CommandInteraction, Message
+    from disnake import CommandInteraction, Message
     from disnake.ext.commands import Bot
 
     bot = Bot()
