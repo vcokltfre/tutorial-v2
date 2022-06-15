@@ -10,21 +10,21 @@
       
       
       
-        <link rel="canonical" href="https://tutorial-alpha.vcokltfre.dev/tutorial/beginner/04-pong/">
+        <link rel="canonical" href="https://tutorial-alpha.vcokltfre.dev/tips/botvars/">
       
-      <link rel="icon" href="../../../assets/tutorial.svg">
+      <link rel="icon" href="../../assets/tutorial.svg">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
     
     
       
-        <title>A Ping Command - Discord Bot Tutorial</title>
+        <title>Bot Variables - Discord Bot Tutorial</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -38,15 +38,15 @@
       
     
     
-      <link rel="stylesheet" href="../../../styles/light.css">
+      <link rel="stylesheet" href="../../styles/light.css">
     
-      <link rel="stylesheet" href="../../../styles/dark.css">
+      <link rel="stylesheet" href="../../styles/dark.css">
     
-      <link rel="stylesheet" href="../../../styles/common.css">
+      <link rel="stylesheet" href="../../styles/common.css">
     
-      <link rel="stylesheet" href="../../../styles/discord.css">
+      <link rel="stylesheet" href="../../styles/discord.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#a-ping-command" class="md-skip">
+        <a href="#bot-variables" class="md-skip">
           Skip to content
         </a>
       
@@ -88,9 +88,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Discord Bot Tutorial" class="md-header__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
+    <a href="../.." title="Discord Bot Tutorial" class="md-header__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
       
-  <img src="../../../assets/tutorial.svg" alt="logo">
+  <img src="../../assets/tutorial.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              A Ping Command
+              Bot Variables
             
           </span>
         </div>
@@ -207,9 +207,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Discord Bot Tutorial" class="md-nav__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
+    <a href="../.." title="Discord Bot Tutorial" class="md-nav__button md-logo" aria-label="Discord Bot Tutorial" data-md-component="logo">
       
-  <img src="../../../assets/tutorial.svg" alt="logo">
+  <img src="../../assets/tutorial.svg" alt="logo">
 
     </a>
     Discord Bot Tutorial
@@ -237,7 +237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -252,7 +252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../credits/" class="md-nav__link">
+      <a href="../../credits/" class="md-nav__link">
         Credits
       </a>
     </li>
@@ -265,12 +265,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -293,212 +295,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tips/blocking/" class="md-nav__link">
+      <a href="../blocking/" class="md-nav__link">
         Blocking vs Non-Blocking IO
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tips/botvars/" class="md-nav__link">
-        Bot Variables
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tips/jsondb/" class="md-nav__link">
-        JSON as a Database
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tips/mentions/" class="md-nav__link">
-        Allowed Mentions
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tips/permissions/" class="md-nav__link">
-        Bot Permissions
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tips/storage/" class="md-nav__link">
-        Storing Data
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tips/tokens/" class="md-nav__link">
-        Storing Tokens and Secrets
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4">
-          Tutorial
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Tutorial" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Tutorial
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
-        Tutorial - Home
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4_2">
-          Beginner
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Beginner" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_2">
-          <span class="md-nav__icon md-icon"></span>
-          Beginner
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../01-setup/" class="md-nav__link">
-        Creating a Bot User
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02-overview/" class="md-nav__link">
-        An Overview of Discord
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03-hello/" class="md-nav__link">
-        Hello, world
       </a>
     </li>
   
@@ -521,7 +319,7 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        A Ping Command
+        Bot Variables
       </a>
       
     </li>
@@ -535,7 +333,207 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-listeners/" class="md-nav__link">
+      <a href="../jsondb/" class="md-nav__link">
+        JSON as a Database
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mentions/" class="md-nav__link">
+        Allowed Mentions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../permissions/" class="md-nav__link">
+        Bot Permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage/" class="md-nav__link">
+        Storing Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tokens/" class="md-nav__link">
+        Storing Tokens and Secrets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/" class="md-nav__link">
+        Tutorial - Home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Beginner
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Beginner" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Beginner
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/01-setup/" class="md-nav__link">
+        Creating a Bot User
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/02-overview/" class="md-nav__link">
+        An Overview of Discord
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/03-hello/" class="md-nav__link">
+        Hello, world
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/04-pong/" class="md-nav__link">
+        A Ping Command
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/beginner/05-listeners/" class="md-nav__link">
         Event Listeners
       </a>
     </li>
@@ -582,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/" class="md-nav__link">
+      <a href="../../tutorial/intermediate/" class="md-nav__link">
         Intermediate - Home
       </a>
     </li>
@@ -622,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/disnake/11-cogs/" class="md-nav__link">
+      <a href="../../tutorial/intermediate/disnake/11-cogs/" class="md-nav__link">
         Cogs
       </a>
     </li>
@@ -669,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intermediate/nextcord/11-cogs/" class="md-nav__link">
+      <a href="../../tutorial/intermediate/nextcord/11-cogs/" class="md-nav__link">
         Cogs
       </a>
     </li>
@@ -727,102 +725,42 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/vcokltfre/tutorial-v2/edit/master/docs/tutorial/beginner/04-pong.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/vcokltfre/tutorial-v2/edit/master/docs/tips/botvars.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="a-ping-command">A Ping Command<a class="headerlink" href="#a-ping-command" title="Permanent link">&para;</a></h1>
-<p>So far our bot is pretty simple - you type <code>/hello</code> and the bot responds with "Hello!" as a static response, which isn't particularly interesting. In this tutorial part we'll use useful information from our bot - its gateway latency - to respond with a more interesting response about the bot's performance.</p>
-<p>Here's the code from the previous part:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Nextcord</label><label for="__tabbed_1_2">Disnake</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">nextcord</span>
+<h1 id="bot-variables">Bot Variables<a class="headerlink" href="#bot-variables" title="Permanent link">&para;</a></h1>
+<p>Often when creating bots you'll want to have state stored on the bot so it can be accessed in commands, cogs, etc. Many tutorials will show doing this using global variables or just setting new attributes on the bot object, but neither of these are good practices.</p>
+<p>The correct way to add attributes to a bot to store state is by subclassing the bot class. For example, here is a bot with a <code>version</code> attribute added so all commands can access it:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MyBot</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Bot</span><span class="p">):</span>
+    <span class="n">version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;1.0.0&quot;</span>
 
-<span class="n">client</span> <span class="o">=</span> <span class="n">nextcord</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
 
-<span class="nd">@client</span><span class="o">.</span><span class="n">slash_command</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A simple hello command.&quot;</span><span class="p">,</span>
-    <span class="n">guild_ids</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
-<span class="p">)</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">nextcord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+<span class="n">bot</span> <span class="o">=</span> <span class="n">MyBot</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</code></pre></div>
+<p>This is a very simple example, but immediately we have made the code far easier to reason about. Now, linters can understand what's going on, and language servers like Pylance can give intelligent code suggestions and tell us if we're using the wrong type for something.</p>
+<p>Here's a more complex example which stores the last message the bot has received and compares the content of it when new messages arrive:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MyBot</span><span class="p">(</span><span class="n">commands</span><span class="o">.</span><span class="n">Bot</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-<span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;YOUR_BOT_TOKEN&quot;</span><span class="p">)</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">disnake</span> <span class="kn">import</span> <span class="n">CommandInteraction</span>
-<span class="kn">from</span> <span class="nn">disnake.ext.commands</span> <span class="kn">import</span> <span class="n">Bot</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Message</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 
-<span class="n">bot</span> <span class="o">=</span> <span class="n">Bot</span><span class="p">()</span>
 
-<span class="nd">@bot</span><span class="o">.</span><span class="n">slash_command</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A simple hello command.&quot;</span><span class="p">,</span>
-    <span class="n">guild_ids</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
-<span class="p">)</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">CommandInteraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+<span class="n">bot</span> <span class="o">=</span> <span class="n">MyBot</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 
-<span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;YOUR_BOT_TOKEN&quot;</span><span class="p">)</span>
+<span class="nd">@bot</span><span class="o">.</span><span class="n">listen</span><span class="p">()</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_message</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">bot</span><span class="o">.</span><span class="n">last_message</span> <span class="ow">and</span> <span class="n">message</span><span class="o">.</span><span class="n">content</span> <span class="o">==</span> <span class="n">bot</span><span class="o">.</span><span class="n">last_message</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;They have the same content!&quot;</span><span class="p">)</span>
+
+    <span class="n">bot</span><span class="o">.</span><span class="n">last_message</span> <span class="o">=</span> <span class="n">message</span>
 </code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be sure not to overwrite existing attributes used by the bot, such as <code>users</code>, <code>guilds</code>, or <code>cogs</code>.</p>
 </div>
-</div>
-</div>
-<p>The code we will be writing in a second will go just above the <code>bot.run()</code> call. Firstly we'll start out by defining the command again:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Nextcord</label><label for="__tabbed_2_2">Disnake</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nd">@client</span><span class="o">.</span><span class="n">slash_command</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ping&quot;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A simple ping command.&quot;</span><span class="p">,</span>
-    <span class="n">guild_ids</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
-<span class="p">)</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">ping</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">nextcord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</code></pre></div>
-<p>And next we'll add in the magical line which shows us the bot's latency:</p>
-<div class="highlight"><pre><span></span><code>    <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pong! </span><span class="si">{</span><span class="n">client</span><span class="o">.</span><span class="n">latency</span> <span class="o">*</span> <span class="mi">1000</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">ms&quot;</span><span class="p">)</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nd">@bot</span><span class="o">.</span><span class="n">slash_command</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ping&quot;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A simple ping command.&quot;</span><span class="p">,</span>
-    <span class="n">guild_ids</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
-<span class="p">)</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">ping</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">CommandInteraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</code></pre></div>
-<p>And next we'll add in the magical line which shows us the bot's latency:</p>
-<div class="highlight"><pre><span></span><code>    <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pong! </span><span class="si">{</span><span class="n">bot</span><span class="o">.</span><span class="n">latency</span> <span class="o">*</span> <span class="mi">1000</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">ms&quot;</span><span class="p">)</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The final line here is indented by one indent. Make sure to reflect this in your own code.</p>
-</div>
-<p>Most of this you have seen before in the previous part, but the important bit is the line which says:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Nextcord</label><label for="__tabbed_3_2">Disnake</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>await inter.response.send_message(f&quot;Pong! {client.latency * 1000:.2f}ms&quot;)
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>await inter.send(f&quot;Pong! {bot.latency * 1000:.2f}ms&quot;)
-</code></pre></div>
-</div>
-</div>
-</div>
-<p>The <code>latency</code> property of the bot or client tells us in seconds how long it took for the Discord gateway to respond to us last time we sent it a heartbeat payload (which keeps the connection alive). We multiply this by 1000 to get the latency in milliseconds, which is better for being interpreted, and is more standard, and then we round it to 2 decimal places using the <code>:.2f</code> format specifier.</p>
-<p>Now you can once again run your bot - having changed the <code>guild_ids=[...]</code> to contain your own guild IDs - and you'll be able to use the command like this:</p>
-<div class="highlight"><pre><span></span><code>message:04-01.json
-</code></pre></div>
-<p>That's it for this part! Now you're ready to move on to the next part: listening for events!</p>
 
               
             </article>
@@ -836,7 +774,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../03-hello/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hello, world" rel="prev">
+        <a href="../blocking/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Blocking vs Non-Blocking IO" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -845,20 +783,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Hello, world
+              Blocking vs Non-Blocking IO
             </div>
           </div>
         </a>
       
       
         
-        <a href="../05-listeners/" class="md-footer__link md-footer__link--next" aria-label="Next: Event Listeners" rel="next">
+        <a href="../jsondb/" class="md-footer__link md-footer__link--next" aria-label="Next: JSON as a Database" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Event Listeners
+              JSON as a Database
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -914,12 +852,12 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
       
-        <script src="../../../js/discord.js"></script>
+        <script src="../../js/discord.js"></script>
       
     
   </body>
