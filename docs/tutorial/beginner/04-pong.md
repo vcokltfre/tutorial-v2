@@ -19,7 +19,7 @@ Here's the code from the previous part:
     async def hello(inter: nextcord.Interaction) -> None:
         await inter.response.send_message("Hello!")
 
-    bot.run("YOUR_BOT_TOKEN")
+    client.run("YOUR_BOT_TOKEN")
     ```
 
 === "Disnake"
@@ -81,10 +81,19 @@ The code we will be writing in a second will go just above the `bot.run()` call.
 
     The final line here is indented by one indent. Make sure to reflect this in your own code.
 
-Most of this you have seen before in the previous part, but the important bit is the line which says either:
+Most of this you have seen before in the previous part, but the important bit is the line which says:
 
-- `await inter.response.send_message(f"Pong! {client.latency * 1000:.2f}ms")` (Nextcord)
-- `await inter.send(f"Pong! {bot.latency * 1000:.2f}ms")` (Disnake)
+=== "Nextcord"
+
+    ```
+    await inter.response.send_message(f"Pong! {client.latency * 1000:.2f}ms")
+    ```
+
+=== "Disnake"
+
+    ```
+    await inter.send(f"Pong! {bot.latency * 1000:.2f}ms")
+    ```
 
 The `latency` property of the bot or client tells us in seconds how long it took for the Discord gateway to respond to us last time we sent it a heartbeat payload (which keeps the connection alive). We multiply this by 1000 to get the latency in milliseconds, which is better for being interpreted, and is more standard, and then we round it to 2 decimal places using the `:.2f` format specifier.
 

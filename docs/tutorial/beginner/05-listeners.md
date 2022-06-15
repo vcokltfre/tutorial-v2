@@ -56,6 +56,14 @@ Next we'll create a listener that will delete any message that contains the word
             await message.delete()
     ```
 
+    Here's a breakdown of what we're doing here:
+
+    - `@client.event` is a decorator which tells Nextcord that this is an event listener.
+    - `async def on_message(message: nextcord.Message) -> None` is the function which will be called when the event is triggered.
+    - `message` is the message that triggered the event.
+    - `if "badword" in message.content` is a check to see if the message contains the word "badword" in it.
+    - `await message.delete()` deletes the message the user sent.
+
 === "Disnake"
 
     ```py
@@ -65,13 +73,13 @@ Next we'll create a listener that will delete any message that contains the word
             await message.delete()
     ```
 
-Here's a breakdown of what we're doing here:
+    Here's a breakdown of what we're doing here:
 
-- `@bot.listen()` is a decorator which tells Disnake that this is an event listener.
-- `async def on_message(message: Message) -> None` is the function which will be called when the event is triggered.
-- `message` is the message that triggered the event.
-- `if "badword" in message.content` is a check to see if the message contains the word "badword" in it.
-- `await message.delete()` deletes the message the user sent.
+    - `@bot.listen()` is a decorator which tells Disnake that this is an event listener.
+    - `async def on_message(message: Message) -> None` is the function which will be called when the event is triggered.
+    - `message` is the message that triggered the event.
+    - `if "badword" in message.content` is a check to see if the message contains the word "badword" in it.
+    - `await message.delete()` deletes the message the user sent.
 
 !!! Note
 
