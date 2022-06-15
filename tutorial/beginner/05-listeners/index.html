@@ -736,7 +736,7 @@
 <span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">nextcord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
 
-<span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;YOUR_BOT_TOKEN&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;YOUR_BOT_TOKEN&quot;</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -771,6 +771,14 @@
     <span class="k">if</span> <span class="s2">&quot;badword&quot;</span> <span class="ow">in</span> <span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
         <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
 </code></pre></div>
+<p>Here's a breakdown of what we're doing here:</p>
+<ul>
+<li><code>@client.event</code> is a decorator which tells Nextcord that this is an event listener.</li>
+<li><code>async def on_message(message: nextcord.Message) -&gt; None</code> is the function which will be called when the event is triggered.</li>
+<li><code>message</code> is the message that triggered the event.</li>
+<li><code>if "badword" in message.content</code> is a check to see if the message contains the word "badword" in it.</li>
+<li><code>await message.delete()</code> deletes the message the user sent.</li>
+</ul>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nd">@bot</span><span class="o">.</span><span class="n">listener</span><span class="p">()</span>
@@ -778,9 +786,6 @@
     <span class="k">if</span> <span class="s2">&quot;badword&quot;</span> <span class="ow">in</span> <span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
         <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
 </code></pre></div>
-</div>
-</div>
-</div>
 <p>Here's a breakdown of what we're doing here:</p>
 <ul>
 <li><code>@bot.listener()</code> is a decorator which tells Disnake that this is an event listener.</li>
@@ -789,6 +794,9 @@
 <li><code>if "badword" in message.content</code> is a check to see if the message contains the word "badword" in it.</li>
 <li><code>await message.delete()</code> deletes the message the user sent.</li>
 </ul>
+</div>
+</div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is a very simple example of using a listener for events. Much more complex tasks can be achieved using listeners, but they are out of scope for this beginner part. More complex examples will be given in later intermediate parts.</p>

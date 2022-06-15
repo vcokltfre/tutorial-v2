@@ -736,7 +736,7 @@
 <span class="k">async</span> <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">inter</span><span class="p">:</span> <span class="n">nextcord</span><span class="o">.</span><span class="n">Interaction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="k">await</span> <span class="n">inter</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
 
-<span class="n">bot</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;YOUR_BOT_TOKEN&quot;</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;YOUR_BOT_TOKEN&quot;</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -791,11 +791,19 @@
 <p class="admonition-title">Note</p>
 <p>The final line here is indented by one indent. Make sure to reflect this in your own code.</p>
 </div>
-<p>Most of this you have seen before in the previous part, but the important bit is the line which says either:</p>
-<ul>
-<li><code>await inter.response.send_message(f"Pong! {client.latency * 1000:.2f}ms")</code> (Nextcord)</li>
-<li><code>await inter.send(f"Pong! {bot.latency * 1000:.2f}ms")</code> (Disnake)</li>
-</ul>
+<p>Most of this you have seen before in the previous part, but the important bit is the line which says:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Nextcord</label><label for="__tabbed_3_2">Disnake</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>await inter.response.send_message(f&quot;Pong! {client.latency * 1000:.2f}ms&quot;)
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>await inter.send(f&quot;Pong! {bot.latency * 1000:.2f}ms&quot;)
+</code></pre></div>
+</div>
+</div>
+</div>
 <p>The <code>latency</code> property of the bot or client tells us in seconds how long it took for the Discord gateway to respond to us last time we sent it a heartbeat payload (which keeps the connection alive). We multiply this by 1000 to get the latency in milliseconds, which is better for being interpreted, and is more standard, and then we round it to 2 decimal places using the <code>:.2f</code> format specifier.</p>
 <p>Now you can once again run your bot - having changed the <code>guild_ids=[...]</code> to contain your own guild IDs - and you'll be able to use the command like this:</p>
 <div class="highlight"><pre><span></span><code>message:04-01.json
